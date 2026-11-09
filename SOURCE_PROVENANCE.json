@@ -1,0 +1,59 @@
+{
+  "schema": "solovey.host.source-provenance/v1",
+  "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+  "originalCommit": "649afeb08322e22e4374bdd1638addca8e3f9fd9",
+  "originalLicense": "GPL-3.0",
+  "licenseSHA256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+  "historyPolicy": "Traceable copied source with per-file original Git blobs, authors and complete file history; original repository history is unchanged.",
+  "files": [
+    {
+      "source": "internal/networkidentity/address.go",
+      "destination": "networkidentity/address.go",
+      "originalBlob": "b0a705c405f93a1e501bc4131c63aa44bec4cdd9",
+      "originalSHA256": "77372f14fdb6076ffafafa236a7444be88394df0d2a86c2b4ed6e37ea8d8cc18",
+      "destinationSHA256": "77372f14fdb6076ffafafa236a7444be88394df0d2a86c2b4ed6e37ea8d8cc18",
+      "adaptation": "none",
+      "history": [
+        "4670840e58ed352acf16b2437d2c5c3c62a7144a\t2026-10-17T17:00:13+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): expose one Local Host identity snapshot"
+      ]
+    },
+    {
+      "source": "internal/networkidentity/snapshot.go",
+      "destination": "networkidentity/snapshot.go",
+      "originalBlob": "99f458f090d22fce24d17620929e577032c065ed",
+      "originalSHA256": "45671b787a684f88de9ac8e05be89b88755cbbd01726462bf0711525d0b5585a",
+      "destinationSHA256": "74f6104efdbb3c1d19ff2e189edd08cb33658a9f6eb188dee42b5515f658919d",
+      "adaptation": "public HostRef import path only",
+      "history": [
+        "4670840e58ed352acf16b2437d2c5c3c62a7144a\t2026-10-17T17:00:13+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): expose one Local Host identity snapshot"
+      ]
+    },
+    {
+      "source": "internal/networkidentity/snapshot_test.go",
+      "destination": "networkidentity/snapshot_test.go",
+      "originalBlob": "876eaced9cd30d2d87700b5e5107d91d6f5c1068",
+      "originalSHA256": "fea3016b44639aaec039c4db93383b3cf02f17ebb84fa933b6c0192ca18795f1",
+      "destinationSHA256": "f03f5d40645c4d3389b1eee280e389ec4a1ecb402bc21360ee89e59946e3199d",
+      "adaptation": "public HostRef import path only",
+      "history": [
+        "4670840e58ed352acf16b2437d2c5c3c62a7144a\t2026-10-17T17:00:13+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): expose one Local Host identity snapshot"
+      ]
+    },
+    {
+      "source": "componenthost/hostref/local.go",
+      "destination": "hostref/local.go",
+      "originalBlob": "2f47561024cc2b65b2ace59c249def4d90b1161d",
+      "originalSHA256": "949bb6667472f06c27f257c41445011491952bf8c6cf53f217ffa24b925c31d0",
+      "destinationSHA256": "949bb6667472f06c27f257c41445011491952bf8c6cf53f217ffa24b925c31d0",
+      "adaptation": "none",
+      "history": [
+        "4670840e58ed352acf16b2437d2c5c3c62a7144a\t2026-10-17T17:00:13+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): expose one Local Host identity snapshot"
+      ]
+    }
+  ],
+  "fixtures": {
+    "source": "Accepted original implementation execution",
+    "schema": "host-network-identity-fixtures/v1",
+    "sha256": "ff83fc9c0b5a7d64d35d37ede09b530aafa07d3fe420e3e0bd055278c15b8eb3"
+  }
+}
