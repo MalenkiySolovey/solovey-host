@@ -32,7 +32,7 @@ jobs:
           node-version: '24.16.0'
       - name: Check formatting
         shell: bash
-        run: test -z "$(gofmt -l hostref networkidentity)"
+        run: test -z "$(gofmt -l $(git ls-files '*.go'))"
       - run: node tools/verify-dependencies.mjs
       - run: go test -race -count=1 ./...
       - run: go vet ./...

@@ -49,11 +49,278 @@
       "history": [
         "4670840e58ed352acf16b2437d2c5c3c62a7144a\t2026-10-17T17:00:13+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): expose one Local Host identity snapshot"
       ]
+    },
+    {
+      "source": "internal/components/manifest/host_api.go",
+      "destination": "componenthost/manifest/host_api.go",
+      "originalBlob": "928e1857e26c21a18a98077d7b5477ce4de7b534",
+      "originalSHA256": "6ae8951d6d9a2e38542ca03a867c70e0701d0b322dd2db5b49c069aa2f5cd9a4",
+      "destinationSHA256": "6ae8951d6d9a2e38542ca03a867c70e0701d0b322dd2db5b49c069aa2f5cd9a4",
+      "adaptation": "public package/import paths only",
+      "history": [
+        "fdae746bcdaaab8515d87116c6fd33510026efd8\t2026-10-21T06:39:11+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(observability): consume declared ComponentHost owner ports",
+        "4c424b0e6307117008236aba3a35ba4824800008\t2026-10-21T03:07:25+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(componenthost): bind declared owner ports for Telegram"
+      ]
+    },
+    {
+      "source": "internal/components/manifest/host_api_test.go",
+      "destination": "componenthost/manifest/host_api_test.go",
+      "originalBlob": "9178a2e8d559b2caa972587286b95770d9db1768",
+      "originalSHA256": "ae65968bcb0b417fd7a5159e7816f8f6a36d6467e840165675224b454a0f8c7e",
+      "destinationSHA256": "ae65968bcb0b417fd7a5159e7816f8f6a36d6467e840165675224b454a0f8c7e",
+      "adaptation": "public package/import paths only",
+      "history": [
+        "fdae746bcdaaab8515d87116c6fd33510026efd8\t2026-10-21T06:39:11+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(observability): consume declared ComponentHost owner ports",
+        "4c424b0e6307117008236aba3a35ba4824800008\t2026-10-21T03:07:25+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(componenthost): bind declared owner ports for Telegram"
+      ]
+    },
+    {
+      "source": "componenthost/secretref/reference.go",
+      "destination": "secretref/reference.go",
+      "originalBlob": "54dffc9bcd4fe79ca3dce90960ef91637c79a833",
+      "originalSHA256": "8ebaa54a6c939b4382dd527bf1a0d1215350a4141df0f550169e2864eabd5fef",
+      "destinationSHA256": "bd94e1bd66a776769908f917dc50199dfe542ee93e7dc797bdda4993a0da18bb",
+      "adaptation": "public package/import paths only",
+      "history": [
+        "2d26a1c1712cdcd118df932de04dcfc7a32035be\t2026-10-18T17:21:17+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdapt Telegram credentials to scoped SecretRef access"
+      ]
+    },
+    {
+      "source": "componenthost/secretref/reference_test.go",
+      "destination": "secretref/reference_test.go",
+      "originalBlob": "f8b6387de59c3b131b4d828e9b3e61bad0db0fdb",
+      "originalSHA256": "e6b5b226503475df108d0b2cd455d69c3efca09ac24fd4d696766c6ab59fc5f4",
+      "destinationSHA256": "e6b5b226503475df108d0b2cd455d69c3efca09ac24fd4d696766c6ab59fc5f4",
+      "adaptation": "public package/import paths only",
+      "history": [
+        "2d26a1c1712cdcd118df932de04dcfc7a32035be\t2026-10-18T17:21:17+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdapt Telegram credentials to scoped SecretRef access"
+      ]
+    },
+    {
+      "source": "util/redact/redact.go",
+      "destination": "redact/redact.go",
+      "originalBlob": "17b9162d7632df5495b73ccfca23400ef6246517",
+      "originalSHA256": "57324fa334cf73a37d3a61e1d54c20f8f2cbe53e6227095dd4cce613223e834c",
+      "destinationSHA256": "57324fa334cf73a37d3a61e1d54c20f8f2cbe53e6227095dd4cce613223e834c",
+      "adaptation": "public package/import paths only",
+      "history": [
+        "01cfe6937bd86f2cf3550e9413fe0110ae1bc742\t2026-10-29T11:36:56+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdd OpenVPN client endpoints with owned keys and VPN DNS",
+        "0c8e0663ca57f42f5048c7ce6d52da23c5d15867\t2026-10-29T11:00:55+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tIntegrate OpenConnect endpoints and DNS with owned private credentials",
+        "d1c9edefe236dba34ac64b4f8558902a3e51d874\t2026-10-26T23:14:55+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tServe Sudoku with owned master and delivery credentials",
+        "15134f214e0d16a290665c563b2fa029db813861\t2026-10-26T03:33:47+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: integrate SSH and MTProxy with native credential owners",
+        "b22330e35ae02ea5c312349ed1fb42199cc4faf8\t2026-10-09T17:13:11+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tEnable managed Snell with official version and admission contracts",
+        "52ed03620e0d06ada32025a236baf5e7d2c81578\t2026-10-08T12:40:25+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tPreserve TLS provider and transport state across 1.14 candidates",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0",
+        "de154c1c1ee633d9cfb5efdf9434a6edde0bfddf\t2026-06-06T09:42:27+07:00\tdeposist <deposist@users.noreply.github.com>\tRelease v1.5.7-beta7: low-risk hardening & bug fixes from independent review",
+        "63b4623ad0f3c5094b97b9b6d6021d6894a44c27\t2026-06-05T18:58:48+07:00\tdeposist <deposist@users.noreply.github.com>\tfix(redact): mask proxy-URL secret-setting keys in logs",
+        "aef936b3859a21529963d22165abf55db6680a55\t2026-05-21T11:16:16+07:00\tdeposist <deposist@users.noreply.github.com>\tfeat: port product snapshot from s-ui-rus-inst"
+      ]
+    },
+    {
+      "source": "util/redact/redact_test.go",
+      "destination": "redact/redact_test.go",
+      "originalBlob": "924a493aced8fd90e0bacc9d29c6dc9a1f87de77",
+      "originalSHA256": "628989ee636f91e29c22bb7a6321223b9104aca0a99a4c8443a0b5f00c70bfe3",
+      "destinationSHA256": "628989ee636f91e29c22bb7a6321223b9104aca0a99a4c8443a0b5f00c70bfe3",
+      "adaptation": "public package/import paths only",
+      "history": [
+        "01cfe6937bd86f2cf3550e9413fe0110ae1bc742\t2026-10-29T11:36:56+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdd OpenVPN client endpoints with owned keys and VPN DNS",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0",
+        "de154c1c1ee633d9cfb5efdf9434a6edde0bfddf\t2026-06-06T09:42:27+07:00\tdeposist <deposist@users.noreply.github.com>\tRelease v1.5.7-beta7: low-risk hardening & bug fixes from independent review",
+        "63b4623ad0f3c5094b97b9b6d6021d6894a44c27\t2026-06-05T18:58:48+07:00\tdeposist <deposist@users.noreply.github.com>\tfix(redact): mask proxy-URL secret-setting keys in logs",
+        "aef936b3859a21529963d22165abf55db6680a55\t2026-05-21T11:16:16+07:00\tdeposist <deposist@users.noreply.github.com>\tfeat: port product snapshot from s-ui-rus-inst"
+      ]
+    },
+    {
+      "source": "util/redact/snell_test.go",
+      "destination": "redact/snell_test.go",
+      "originalBlob": "12024256815c1dc8dcd6c71aa769e976bae3d75f",
+      "originalSHA256": "5e9e40d3bb2c540efdcd302f6b6b90ae34c813059af63dfe1e72141eb9a08ddd",
+      "destinationSHA256": "5e9e40d3bb2c540efdcd302f6b6b90ae34c813059af63dfe1e72141eb9a08ddd",
+      "adaptation": "public package/import paths only",
+      "history": [
+        "b22330e35ae02ea5c312349ed1fb42199cc4faf8\t2026-10-09T17:13:11+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tEnable managed Snell with official version and admission contracts"
+      ]
+    },
+    {
+      "source": "util/redact/sudoku_test.go",
+      "destination": "redact/sudoku_test.go",
+      "originalBlob": "f6f02b1d5b217dc79ea8a511a5f49e444ad43d0d",
+      "originalSHA256": "fbd3184c2a2bdd308d46c958ba17a18d3be7e148f13b210fd2764c476c4c44df",
+      "destinationSHA256": "fbd3184c2a2bdd308d46c958ba17a18d3be7e148f13b210fd2764c476c4c44df",
+      "adaptation": "public package/import paths only",
+      "history": [
+        "d1c9edefe236dba34ac64b4f8558902a3e51d874\t2026-10-26T23:14:55+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tServe Sudoku with owned master and delivery credentials"
+      ]
+    },
+    {
+      "source": "internal/httpheader/sanitize.go",
+      "destination": "httpheader/sanitize.go",
+      "originalBlob": "254f2d85799c177d14ea26776c5277d93aca9c9c",
+      "originalSHA256": "9a03ee521c48fc4ad253bf524d1e6627e5a15a29d58e3ab21abb16af6c07ffc7",
+      "destinationSHA256": "9a03ee521c48fc4ad253bf524d1e6627e5a15a29d58e3ab21abb16af6c07ffc7",
+      "adaptation": "public package/import paths only",
+      "history": [
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0",
+        "aef936b3859a21529963d22165abf55db6680a55\t2026-05-21T11:16:16+07:00\tdeposist <deposist@users.noreply.github.com>\tfeat: port product snapshot from s-ui-rus-inst"
+      ]
+    },
+    {
+      "source": "internal/httpheader/sanitize_test.go",
+      "destination": "httpheader/sanitize_test.go",
+      "originalBlob": "bfc16d2589db5b1f67d961411b9b875105640085",
+      "originalSHA256": "ea1faeb7199ed6fbeef1b67bb58985a4c154905a21efebf120c6641307658327",
+      "destinationSHA256": "ea1faeb7199ed6fbeef1b67bb58985a4c154905a21efebf120c6641307658327",
+      "adaptation": "public package/import paths only",
+      "history": [
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0",
+        "aef936b3859a21529963d22165abf55db6680a55\t2026-05-21T11:16:16+07:00\tdeposist <deposist@users.noreply.github.com>\tfeat: port product snapshot from s-ui-rus-inst"
+      ]
+    },
+    {
+      "source": "componentkit/telegram/botapi.go",
+      "destination": "componentkit/telegram/botapi.go",
+      "originalBlob": "41f79e67bde2b3b8b830c5e6cfce000c764df97e",
+      "originalSHA256": "3df9d77e9d7ec794171bea1dabbceacedcb6bf7ae62d82e4ea91f1e08528025f",
+      "destinationSHA256": "56d367a0e98de05c7b29d7786268d44fa5e27be727a761b143932bde2ea7c5fe",
+      "adaptation": "public package/import paths only",
+      "history": [
+        "27f6b0b78b4c38b06bdf8a4a5140051256b14863\t2026-07-02T16:59:26+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tPrepare Solovey UI 2026.2.0 release",
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
+      ]
+    },
+    {
+      "source": "componentkit/telegram/transport.go",
+      "destination": "componentkit/telegram/transport.go",
+      "originalBlob": "0aaaf76bee4b38941d671d57498121213124bb4e",
+      "originalSHA256": "abbd00e45578fb72c4d08aaf473f983fa8b8a695b76d41ca922c447746f6fcfa",
+      "destinationSHA256": "abbd00e45578fb72c4d08aaf473f983fa8b8a695b76d41ca922c447746f6fcfa",
+      "adaptation": "public package/import paths only",
+      "history": [
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "27f6b0b78b4c38b06bdf8a4a5140051256b14863\t2026-07-02T16:59:26+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tPrepare Solovey UI 2026.2.0 release",
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
+      ]
+    },
+    {
+      "source": "componentkit/telegram/botapi_test.go",
+      "destination": "componentkit/telegram/botapi_test.go",
+      "originalBlob": "bb447f2e044309de67ab086188760bb21c1dc4f6",
+      "originalSHA256": "810d9057b089c0fd7af904a7a1a62e4dd57585d565c6cb4eb61d080488ce49e7",
+      "destinationSHA256": "810d9057b089c0fd7af904a7a1a62e4dd57585d565c6cb4eb61d080488ce49e7",
+      "adaptation": "public package/import paths only",
+      "history": [
+        "27f6b0b78b4c38b06bdf8a4a5140051256b14863\t2026-07-02T16:59:26+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tPrepare Solovey UI 2026.2.0 release",
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
+      ]
+    },
+    {
+      "source": "internal/ops/operationcoordination/change.go",
+      "destination": "operationref/reference.go",
+      "originalBlob": "44d4b3a69f8838529ec68a1bc6b65950d991b9ea",
+      "originalSHA256": "286ec07895426043b214b134f225f932a9d8f926b56c091f0b0d29aa13499ada",
+      "destinationSHA256": "ebd5233f183c61019839a9bfc754de105d1e3f5c50fc42ff95e2b5fa8b366e65",
+      "adaptation": "existing Reference/NewReference/identity validation plus Correlation method from journal.go; storage and transitions excluded",
+      "history": [
+        "df28bf14608790298711745f85db6733a73eda2e\t2026-10-18T16:20:01+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tConverge Update and Data Change coordination"
+      ],
+      "additionalSource": {
+        "source": "internal/ops/operationcoordination/journal.go",
+        "originalBlob": "2ab539ce9408a94a7a1c3f812bb18563afed840e"
+      }
+    },
+    {
+      "source": "internal/auditrecord/record.go",
+      "destination": "auditrecord/event.go",
+      "originalBlob": "8be783b0e49168b5216fe53491b76167ac407f21",
+      "originalSHA256": "7b73522dac90accd36d0decdf53cb5381ea3e5d10ce54cfa048bbe67bc9230ca",
+      "destinationSHA256": "98e2195668a32f8d03f8bec85578aafbbe1ee39d179abd7f3c1fc4870244159c",
+      "adaptation": "Event value only; builder, limits and transaction storage remain with the Panel audit owner",
+      "history": [
+        "44ad9182c2042019138e7719b906b9a41b966414\t2026-10-25T15:53:13+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdd native inbound workflows with Users-owned credentials"
+      ]
+    },
+    {
+      "source": "service/observability/types.go",
+      "destination": "observation/types.go",
+      "originalBlob": "6ba2c898403271aee6420442b95def9024262930",
+      "originalSHA256": "1c0d24f995a8d13bfd9b377069498750fd559636a22bb29fc9fb9ab193d64b5d",
+      "destinationSHA256": "605b7e2e90abce8ee3b43a093d8656fec7c04b1fecc14b0f4381bd3a163d1394",
+      "adaptation": "only public sample/bucket/metric values and constants; memory/history policy and allocation excluded",
+      "history": [
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "27f6b0b78b4c38b06bdf8a4a5140051256b14863\t2026-07-02T16:59:26+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tPrepare Solovey UI 2026.2.0 release",
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
+      ]
+    },
+    {
+      "source": "service/observability/ports.go",
+      "destination": "observation/ports.go",
+      "originalBlob": "2cbf2523260e138988b6abdd767727058472902f",
+      "originalSHA256": "b9e2a8ba3c71f7e127e0e458f696b07364ca502b84d9e19af8e076117bf3ed3e",
+      "destinationSHA256": "afbac5450939c1b7a2c4a0bbc7bc6fd1ff73501b44b515d7c914d95893bd961a",
+      "adaptation": "existing Sampler/History contracts with neutral types; no optional implementation or allocation",
+      "history": [
+        "fdae746bcdaaab8515d87116c6fd33510026efd8\t2026-10-21T06:39:11+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(observability): consume declared ComponentHost owner ports"
+      ]
+    },
+    {
+      "source": "componenthost/binding.go",
+      "destination": "componenthost/ports.go",
+      "originalBlob": "9ab79730289d02fe12413934403ca34c5cfff279",
+      "originalSHA256": "724ca535b44f4743fc2819a30e922a43e333158fef492e00f0c9e1bd230f76a6",
+      "adaptation": "existing neutral lifecycle fields/signatures, Scheduler and outbound/audit ports; HTTP, Runtime and concrete store excluded",
+      "history": [
+        "fdae746bcdaaab8515d87116c6fd33510026efd8\t2026-10-21T06:39:11+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(observability): consume declared ComponentHost owner ports",
+        "dff358e16102027167f116cedd8e704891531a2c\t2026-10-21T03:20:58+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfix(componenthost): limit request helpers to declared authority",
+        "4c424b0e6307117008236aba3a35ba4824800008\t2026-10-21T03:07:25+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(componenthost): bind declared owner ports for Telegram"
+      ],
+      "destinationSHA256": "b56091c6126b24ced29332e36aa279d1f5f3a1752f370722865d2ed4ef733bd6",
+      "additionalSources": [
+        {
+          "source": "componenthost/deps.go",
+          "originalBlob": "2932a03fe9a2f6ab55507f375064fb514cf0f051"
+        },
+        {
+          "source": "componenthost/ports.go",
+          "originalBlob": "a520f810a428531aa19de39f743d51370ee2e6ff"
+        },
+        {
+          "source": "componenthost/lifecycle/ports.go",
+          "originalBlob": "6034aecaf0b6ae7942926438b2d83a585cde67b4"
+        },
+        {
+          "source": "componenthost/observation_full.go",
+          "originalBlob": "b1bf1838eb62e83447f073bc69ba7a4a66b417d7"
+        }
+      ]
+    },
+    {
+      "source": "cronjob/scheduler/scheduler.go",
+      "destination": "scheduler/managed_job.go",
+      "originalBlob": "dd4e481f2e2880691364a5de800dc942007af0e6",
+      "originalSHA256": "9ed7efe29578104f6ffaf468611f593de0e504c1717744b59df2658c1ba7fafc",
+      "adaptation": "existing managed job execution/cancellation/drain; public method names, explicit injected operation lease, invalid-lease denial and inert zero cancellation; scheduler/bootstrap stays Panel",
+      "history": [
+        "deb1b1fff374223ae6ca052ab27f2bbe064b9101\t2026-11-04T18:54:22+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tManage WireGuard devices through Users and Endpoints",
+        "7ade7787b53b29129ab8c85a82c040b71cb9be30\t2026-10-04T23:36:43+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfix(restore): drain SQLite generations through acceptance and recovery",
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "27f6b0b78b4c38b06bdf8a4a5140051256b14863\t2026-07-02T16:59:26+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tPrepare Solovey UI 2026.2.0 release",
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
+      ],
+      "destinationSHA256": "e64309aedf5b9ef26724d1df3d586c0c898c0df4eb434183abf0b56d2c436f02"
     }
   ],
   "fixtures": {
     "source": "Accepted original implementation execution",
     "schema": "host-network-identity-fixtures/v1",
     "sha256": "ff83fc9c0b5a7d64d35d37ede09b530aafa07d3fe420e3e0bd055278c15b8eb3"
+  },
+  "valueFixtures": {
+    "source": "Accepted original implementation execution",
+    "originalCommit": "649afeb08322e22e4374bdd1638addca8e3f9fd9",
+    "file": "qualification/testdata/values.json",
+    "cases": 13,
+    "sha256": "1d4d7f29ba8c1f3c57fd2c66ee3423ea45efe3947686f5c53de753362b865a0c"
   }
 }
