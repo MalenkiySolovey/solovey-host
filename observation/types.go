@@ -5,7 +5,16 @@ package observation
 type ObservabilityBucket string
 type ObservabilityMetric string
 
-const ()
+const (
+	ObservabilityBucket2s     ObservabilityBucket = "2s"
+	ObservabilityBucket30s    ObservabilityBucket = "30s"
+	ObservabilityBucket1m     ObservabilityBucket = "1m"
+	ObservabilityBucket5m     ObservabilityBucket = "5m"
+	ObservabilityMetricCPU    ObservabilityMetric = "cpu"
+	ObservabilityMetricRAM    ObservabilityMetric = "ram"
+	ObservabilityMetricNetIn  ObservabilityMetric = "net_in"
+	ObservabilityMetricNetOut ObservabilityMetric = "net_out"
+)
 
 type ObservabilitySample struct {
 	DateTime int64                  `json:"dateTime"`

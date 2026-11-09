@@ -90,7 +90,7 @@
       "destination": "secretref/reference_test.go",
       "originalBlob": "f8b6387de59c3b131b4d828e9b3e61bad0db0fdb",
       "originalSHA256": "e6b5b226503475df108d0b2cd455d69c3efca09ac24fd4d696766c6ab59fc5f4",
-      "destinationSHA256": "e6b5b226503475df108d0b2cd455d69c3efca09ac24fd4d696766c6ab59fc5f4",
+      "destinationSHA256": "db269b789cbcd6253b38e86c0b28d554f51aef8c57ba0e64e07faf08bcdcf378",
       "adaptation": "public package/import paths only",
       "history": [
         "2d26a1c1712cdcd118df932de04dcfc7a32035be\t2026-10-18T17:21:17+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdapt Telegram credentials to scoped SecretRef access"
@@ -245,7 +245,7 @@
       "destination": "observation/types.go",
       "originalBlob": "6ba2c898403271aee6420442b95def9024262930",
       "originalSHA256": "1c0d24f995a8d13bfd9b377069498750fd559636a22bb29fc9fb9ab193d64b5d",
-      "destinationSHA256": "605b7e2e90abce8ee3b43a093d8656fec7c04b1fecc14b0f4381bd3a163d1394",
+      "destinationSHA256": "87060200bc87ec2d94f9301b7fa8ad91da4bbf7359cc63fa84f7759037743eb5",
       "adaptation": "only public sample/bucket/metric values and constants; memory/history policy and allocation excluded",
       "history": [
         "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
