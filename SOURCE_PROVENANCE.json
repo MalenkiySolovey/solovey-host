@@ -91,7 +91,7 @@
       "originalBlob": "f8b6387de59c3b131b4d828e9b3e61bad0db0fdb",
       "originalSHA256": "e6b5b226503475df108d0b2cd455d69c3efca09ac24fd4d696766c6ab59fc5f4",
       "destinationSHA256": "db269b789cbcd6253b38e86c0b28d554f51aef8c57ba0e64e07faf08bcdcf378",
-      "adaptation": "public package/import paths only",
+      "adaptation": "original owner-use tests plus a focused guard rejecting raw/arbitrary metadata containers",
       "history": [
         "2d26a1c1712cdcd118df932de04dcfc7a32035be\t2026-10-18T17:21:17+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdapt Telegram credentials to scoped SecretRef access"
       ]
@@ -309,6 +309,70 @@
         "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
       ],
       "destinationSHA256": "e64309aedf5b9ef26724d1df3d586c0c898c0df4eb434183abf0b56d2c436f02"
+    },
+    {
+      "source": "internal/components/manifest/manifest.go",
+      "destination": "componenthost/manifest/manifest.go",
+      "originalBlob": "38c8a14b94d2efe2a6c0eb75290bae6d38969c33",
+      "originalSHA256": "5d9115f6d4ed1a58faee9b51c6a1c337e88b62dea0cb5f8fe68bc5cb2ac56c10",
+      "destinationSHA256": "5d9115f6d4ed1a58faee9b51c6a1c337e88b62dea0cb5f8fe68bc5cb2ac56c10",
+      "adaptation": "none; existing bounded declarative metadata/validation only, no storage or execution",
+      "history": [
+        "70c937a4dc6fd143bf1330c49e522d8996515cdd\t2026-10-21T12:06:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tR5: bind restore and component removal to semantic action policy",
+        "4c424b0e6307117008236aba3a35ba4824800008\t2026-10-21T03:07:25+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(componenthost): bind declared owner ports for Telegram",
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0",
+        "27f6b0b78b4c38b06bdf8a4a5140051256b14863\t2026-07-02T16:59:26+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tPrepare Solovey UI 2026.2.0 release"
+      ]
+    },
+    {
+      "source": "internal/components/manifest/json.go",
+      "destination": "componenthost/manifest/json.go",
+      "originalBlob": "d857e005e21084af166a33f6ae1e57e4a53522e2",
+      "originalSHA256": "c6dfaf1225d7a722556e12b1b6fd1f2daeee031ae3e77543bcd518685ee987f2",
+      "destinationSHA256": "c6dfaf1225d7a722556e12b1b6fd1f2daeee031ae3e77543bcd518685ee987f2",
+      "adaptation": "none; existing bounded declarative metadata/validation only, no storage or execution",
+      "history": [
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0",
+        "27f6b0b78b4c38b06bdf8a4a5140051256b14863\t2026-07-02T16:59:26+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tPrepare Solovey UI 2026.2.0 release"
+      ]
+    },
+    {
+      "source": "internal/components/manifest/durable.go",
+      "destination": "componenthost/manifest/durable.go",
+      "originalBlob": "0823bc0b3522332351212dbb0d41658b23599944",
+      "originalSHA256": "0d91d0eb565d7c1830610704e51ad6e4d4ae647fde42289d08258685e620f613",
+      "destinationSHA256": "0d91d0eb565d7c1830610704e51ad6e4d4ae647fde42289d08258685e620f613",
+      "adaptation": "none; existing bounded declarative metadata/validation only, no storage or execution",
+      "history": [
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ]
+    },
+    {
+      "source": "internal/components/manifest/manifest_test.go",
+      "destination": "componenthost/manifest/manifest_test.go",
+      "originalBlob": "f1f97948db2806d5ab4250ba4f7eac0de04f50d3",
+      "originalSHA256": "45e6a9394da0ba02855dc308df36ea7ca3fe7b039bdfee2e108fb19741305c97",
+      "destinationSHA256": "45e6a9394da0ba02855dc308df36ea7ca3fe7b039bdfee2e108fb19741305c97",
+      "adaptation": "none; existing bounded declarative metadata/validation only, no storage or execution",
+      "history": [
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0",
+        "27f6b0b78b4c38b06bdf8a4a5140051256b14863\t2026-07-02T16:59:26+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tPrepare Solovey UI 2026.2.0 release"
+      ]
+    },
+    {
+      "source": "internal/networkidentity/CONTRACT.md",
+      "destination": "networkidentity/README.md",
+      "originalBlob": "23bbfed833c065b97bd41a85760f395725f78873",
+      "originalSHA256": "96bd423740ac738a55159070d20b835e39c8564f834e6fef922664037d2abfbb",
+      "destinationSHA256": "3bf9bf0c267ec5a63ed07457cc3d8a4a0f18ce81139b714006d9ffd4d2984139",
+      "adaptation": "concise library documentation; Panel HTTP/provider integration details remain with the Panel adapter",
+      "history": [
+        "4670840e58ed352acf16b2437d2c5c3c62a7144a\t2026-10-17T17:00:13+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): expose one Local Host identity snapshot"
+      ]
     }
   ],
   "fixtures": {

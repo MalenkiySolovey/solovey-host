@@ -8,7 +8,7 @@
 | --- | --- |
 | `hostref` | Explicit Local Host identity. |
 | `networkidentity` | Address classification, evidence freshness, bounded snapshots and deterministic revisions. |
-| `componenthost` and `componenthost/manifest` | Declared capabilities and neutral lifecycle contracts for installed components. |
+| `componenthost` and `componenthost/manifest` | Validated component descriptors, declared capabilities and neutral lifecycle contracts. |
 | `scheduler` | Cancellation and drain behavior for existing scheduled jobs, using an injected operation lease. |
 | `secretref` and `operationref` | Scoped owner-use references and masked operation correlation. |
 | `auditrecord` and `observation` | Existing neutral audit events and sample/history projections. |
