@@ -1,0 +1,8 @@
+Solovey Host contains source maintained by the Solovey UI contributors.
+
+Original repository: https://github.com/MalenkiySolovey/solovey-ui
+Original source files, Git blobs, authors and commit history are recorded in
+SOURCE_PROVENANCE.json. Their existing GNU GPLv3 licensing is retained.
+
+The source repository location does not change the ownership or meaning of
+the host facts and component capabilities provided by this library.
