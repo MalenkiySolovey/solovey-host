@@ -8,6 +8,12 @@
 | --- | --- |
 | `hostref` | Explicit Local Host identity. |
 | `networkidentity` | Address classification, evidence freshness, bounded snapshots and deterministic revisions. |
+| `componenthost` and `componenthost/manifest` | Validated component descriptors, declared capabilities and neutral lifecycle contracts. |
+| `scheduler` | Cancellation and drain behavior for existing scheduled jobs, using an injected operation lease. |
+| `secretref` and `operationref` | Scoped owner-use references and masked operation correlation. |
+| `auditrecord` and `observation` | Existing neutral audit events and sample/history projections. |
+| `componentkit/telegram` | Stateless Bot API request, response and retry helpers for independent callers. |
+| `redact` and `httpheader` | Shared secret redaction and bounded text sanitization. |
 
 Network facts retain their source, authority, observation time and expiry. Unknown and stale evidence remains explicit. Address ranges and interface names do not establish LAN/WAN roles or public reachability. Snapshots describe the current process network namespace.
 
@@ -37,6 +43,10 @@ go vet ./...
 ```
 
 Tests cover deterministic JSON, snapshot bounds, evidence expiry and dependency boundaries. Consumers should pin an immutable module version and retain normal Go checksums.
+
+Component composition retains installed/enabled admission, authorization and storage. The lifecycle contracts expose only capabilities already used by their consumers. The scheduled-job helper does not construct a second scheduler; its caller supplies the existing operation admission and retains registration/stop ownership. SecretRef provides masked metadata and owner-use validation without storing or revealing secrets.
+
+Bot API callers supply their approved HTTP client and operation context. The helper creates no background client, bot registration or polling loop. Proxy selection and validation remain with caller adapters. The only external Go dependency is the existing `github.com/robfig/cron/v3` v3.0.1 contract.
 
 ## License and provenance
 
