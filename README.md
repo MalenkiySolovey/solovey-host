@@ -8,7 +8,7 @@
 | --- | --- |
 | `hostref` | Explicit Local Host identity. |
 | `networkidentity` | Address classification, evidence freshness, bounded snapshots and deterministic revisions. |
-| `componenthost` and `componenthost/manifest` | Validated component descriptors, declared capabilities and neutral lifecycle contracts. |
+| `componenthost` and `componenthost/manifest` | Validated component descriptors, declared capabilities, neutral lifecycle contracts and the shared bounded supervisor loop. |
 | `coreruntime` | Bounded runtime group selection through an admitted owner lease, with observation and before-image recovery. |
 | `scheduler` | Cancellation and drain behavior for existing scheduled jobs, using an injected operation lease. |
 | `secretref` and `operationref` | Scoped owner-use references and masked operation correlation. |
@@ -44,6 +44,29 @@ go vet ./...
 ```
 
 Tests cover deterministic JSON, snapshot bounds, evidence expiry and dependency boundaries. Consumers should pin an immutable module version and retain normal Go checksums.
+
+`componenthost.Reconcile(ctx, running, active, recorder)` uses the existing
+supervisor algorithm: stop inactive instances in reverse order, start newly
+admitted instances in supplied order, keep existing instances on repeated
+reconcile, and retain failed Stops for retry. `Stop` drains all instances through
+the same implementation. Each `Entry` contains its ComponentID, actual
+`Lifecycle` and admitted Local Host `Ports`. The caller keeps its existing
+serializer and uses the returned instance set; no second ComponentHost,
+registry or scheduler is created. For example:
+
+```go
+running, err = componenthost.Reconcile(ctx, running, installedEnabled, recorder)
+// During shutdown, keep any instances whose drain has not completed:
+running, err = componenthost.Stop(ctx, running, recorder)
+```
+
+Composition owns installed/enabled/capability admission and supplies no entry
+for an absent or disabled Component. A Component must undo partial startup if
+Start fails, and Stop must drain owned activity before returning nil. The
+recorder reports actual lifecycle calls; successful Start does not establish
+Health/readiness. Failed Stop retains the instance even after disable/removal
+intent. Ordinary disable calls neither DropData nor external-rule cleanup.
+Owner-specific data removal and privileged enforcement remain separate.
 
 Component composition retains installed/enabled admission, authorization and storage. The lifecycle contracts expose only capabilities already used by their consumers. The scheduled-job helper does not construct a second scheduler; its caller supplies the existing operation admission and retains registration/stop ownership. SecretRef provides masked metadata and owner-use validation without storing or revealing secrets.
 

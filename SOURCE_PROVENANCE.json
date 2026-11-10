@@ -401,6 +401,23 @@
         "dd43b0e2880da53490398a5d27cb026895be874f\t2026-10-23T07:41:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: add explicit native Shtorm core build flavor",
         "e3d135c8af6f2c21105fb48fd93438628b1d1507\t2026-10-08T23:12:41+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdd private generation-owned official runtime API"
       ]
+    },
+    {
+      "source": "componenthost/supervisor/supervisor.go",
+      "destination": "componenthost/reconcile.go",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "d63184ff1c338f64b7b001e0613efef77524a55d",
+      "originalBlob": "7bab5b7f211a9edfaf815cd82c08f5b948c376f6",
+      "originalSHA256": "ed518b588cb0357707c42e8c3d5758bf4246c1f1245bd7ba6eda18bd0f6726e9",
+      "destinationSHA256": "1e098503b1413851ee192115c2ac4909addb2012bcaf03955e6f8dba29550429",
+      "adaptation": "Extract existing reverse-stop/forward-start/failed-stop-retention lifecycle loop behind neutral calls. Registry, installed/enabled admission, persistence, migration, removal locks and observation publication remain adapters. Partial startup cleanup remains the actual Component responsibility.",
+      "history": [
+        "d6b51cdeb1ee8085e18cd474a8258702387d7d56\t2026-10-17T21:56:59+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfix(componenthost): expose observed lifecycle separately from eligibility",
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0",
+        "5be0d168f69f6b32a0ca581a5ef5223d7d986be0\t2026-07-03T01:37:11+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tFinalize Solovey UI 2026.2.0 release",
+        "27f6b0b78b4c38b06bdf8a4a5140051256b14863\t2026-07-02T16:59:26+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tPrepare Solovey UI 2026.2.0 release"
+      ]
     }
   ]
 }
