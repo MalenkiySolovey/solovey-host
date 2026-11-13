@@ -373,6 +373,130 @@
       "history": [
         "4670840e58ed352acf16b2437d2c5c3c62a7144a\t2026-10-17T17:00:13+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): expose one Local Host identity snapshot"
       ]
+    },
+    {
+      "source": "componenthost/durable/ports.go",
+      "destination": "componenthost/durable/ports.go",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "7adbb999d7fe70ba169bccae06afafaf4fc2e413",
+      "originalBlob": "1c4126ad5b06cbbd37f2b05632ef3ae795ceb5a9",
+      "originalSHA256": "44c9cf1c32d9b068cd78b5a2a0f8e539d887a5c25c87e2188ae7807b52992aeb",
+      "destinationSHA256": "44c9cf1c32d9b068cd78b5a2a0f8e539d887a5c25c87e2188ae7807b52992aeb",
+      "adaptation": "Existing owner-scoped declarations unchanged.",
+      "relatedSources": [],
+      "history": [
+        "a92099366fbb67b598f0772ac0fa6d75580278f7\t2026-11-12T14:37:19+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdd typed durable component admission with Backend bindings"
+      ]
+    },
+    {
+      "source": "componenthost/health/evidence.go",
+      "destination": "componenthost/health/evidence.go",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "7adbb999d7fe70ba169bccae06afafaf4fc2e413",
+      "originalBlob": "5b70c5e0651533f41abf7229c22b1bea99685c42",
+      "originalSHA256": "9820af335380e10cdbb0cd1e0e97fac2c47f5a563b550759d1dd6eee0d91d231",
+      "destinationSHA256": "ffce22f02dd615eb0b36e6c203c1cd3b4146a96c6e503814be7d316dfb1708cd",
+      "adaptation": "Extract required neutral values and validation only; concrete registries, owners and transactions remain Product. Resource validation consumes the existing canonical tuple instead of the Product Inventory struct.",
+      "relatedSources": [
+        {
+          "source": "componenthost/health/registry.go",
+          "originalBlob": "dc55b6d94de4867cfbe2b0f067fff1236e713d76",
+          "originalSHA256": "6f28da0e37ee10dc0e7b16a7ffadcec28cd391adadfd618ed1befa80ab04c465"
+        },
+        {
+          "source": "componenthost/health/interception_probe.go",
+          "originalBlob": "aed572d355d64221831f7e50f51d49f85c65f15c",
+          "originalSHA256": "7d127ef13bab9ba76ebc2d5fe04510b85058a22ee568b02ffe844fcc0f3370c7"
+        }
+      ],
+      "history": [
+        "e00a1777966a5b2cfad5258599ef061037bcc0bb\t2026-10-18T16:36:46+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tEvolve existing Health registry with revision-bound evidence",
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ]
+    },
+    {
+      "source": "componenthost/resources/identity.go",
+      "destination": "componenthost/resources/identity.go",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "7adbb999d7fe70ba169bccae06afafaf4fc2e413",
+      "originalBlob": "5c3044da82a6c714e4f12841c20c8c24b331c3fb",
+      "originalSHA256": "8ac5f356ccd6b8bbd071995198a5c8f4504b67af64d00293d2ffbe83d5ec1c41",
+      "destinationSHA256": "7e9285124a04b3f04aadd983fa5782e0f97eff979ba8e37957c1b09ab5eea009",
+      "adaptation": "Extract required neutral values and validation only; concrete registries, owners and transactions remain Product. Resource validation consumes the existing canonical tuple instead of the Product Inventory struct.",
+      "relatedSources": [
+        {
+          "source": "componenthost/resources/types.go",
+          "originalBlob": "a8423df8fea8264e09760a464e16068c16cc3beb",
+          "originalSHA256": "6d83d19047585142ddfb5381ac2a61f89fe9bf2083f48457d1bac2d8c09ce392"
+        },
+        {
+          "source": "componenthost/resources/fingerprint.go",
+          "originalBlob": "396a73acc4cfd70464cf1d993c00bf75d536f2a1",
+          "originalSHA256": "d411a91f0322dff72a109b95deec08a6155f17eddb6c0f4ea81b457721679c7b"
+        },
+        {
+          "source": "componenthost/resources/registry.go",
+          "originalBlob": "7aee65d36522ead5637883c467254ce25b6b1063",
+          "originalSHA256": "9868bb9c986b38247c386230c951ce70d19362ab0a7e6ddc9c7a378076851f3c"
+        }
+      ],
+      "history": [
+        "7832aa5ebeae92cd53b791dd6b773ed3156aca0e\t2026-10-18T12:22:58+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdd Local Host identity metadata to configured listeners",
+        "3ade2631b61f81c47b2ca4179665500ab097f195\t2026-09-16T14:15:21+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(platform): add FriendlyWrt 25.12 production support",
+        "c099b01ae5283f2ee5271117e042e51bc166c9ac\t2026-09-14T02:18:00+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tplatform: qualify OpenWrt 25.12.5 support",
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ]
+    },
+    {
+      "source": "componenthost/resources/listen.go",
+      "destination": "componenthost/resources/listen.go",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "7adbb999d7fe70ba169bccae06afafaf4fc2e413",
+      "originalBlob": "70ad37ae5d7129d32cfa572cb9c958e295712a54",
+      "originalSHA256": "a610e624611bb41aad76f71d366f32b0aae32ac8f1ed7c0bc6d4b88664341aef",
+      "destinationSHA256": "a610e624611bb41aad76f71d366f32b0aae32ac8f1ed7c0bc6d4b88664341aef",
+      "adaptation": "Existing pure algorithm unchanged.",
+      "relatedSources": [],
+      "history": [
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ]
+    },
+    {
+      "source": "componenthost/publicsurface/classifier.go",
+      "destination": "componenthost/publicsurface/classifier.go",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "7adbb999d7fe70ba169bccae06afafaf4fc2e413",
+      "originalBlob": "549ce466470f146becb3e14ec013669b5966347f",
+      "originalSHA256": "154dac95496bd7bf42962d49ee2323bc8f1bee85212e6e944e26b44a14b173e1",
+      "destinationSHA256": "154dac95496bd7bf42962d49ee2323bc8f1bee85212e6e944e26b44a14b173e1",
+      "adaptation": "Existing pure algorithm unchanged.",
+      "relatedSources": [],
+      "history": [
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ]
+    },
+    {
+      "source": "componenthost/publicsurface/registry.go",
+      "destination": "componenthost/publicsurface/types.go",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "7adbb999d7fe70ba169bccae06afafaf4fc2e413",
+      "originalBlob": "d427334b4f715d28e298be250785f5bbdc0a75d8",
+      "originalSHA256": "1ccdbb48a4e0869cae1c7963ed8452bae60229c29a024307bd6f1548dce855b9",
+      "destinationSHA256": "2034dd0e7ce2494b6008b3c5d978d39b4933c749f64737752eb80c8540ad4608",
+      "adaptation": "Extract required neutral values and validation only; concrete registries, owners and transactions remain Product. Resource validation consumes the existing canonical tuple instead of the Product Inventory struct.",
+      "relatedSources": [
+        {
+          "source": "componenthost/publicsurface/observation.go",
+          "originalBlob": "9b557fb89a29a13fcda1b030274983d1f017d81f",
+          "originalSHA256": "d51d0c654dca8c859ac0b1ab9c674bab5789f6789374ff02686046f8cd63b051"
+        }
+      ],
+      "history": [
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ]
     }
   ],
   "fixtures": {

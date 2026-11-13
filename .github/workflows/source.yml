@@ -34,6 +34,7 @@ jobs:
         shell: bash
         run: test -z "$(gofmt -l $(git ls-files '*.go'))"
       - run: node tools/verify-dependencies.mjs
+      - run: node tools/verify-public-contracts.mjs
       - run: go test -race -count=1 ./...
       - run: go vet ./...
       - run: git diff --exit-code
