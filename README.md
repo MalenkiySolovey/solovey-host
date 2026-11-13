@@ -9,6 +9,10 @@
 | `hostref` | Explicit Local Host identity. |
 | `networkidentity` | Address classification, evidence freshness, bounded snapshots and deterministic revisions. |
 | `componenthost` and `componenthost/manifest` | Validated component descriptors, declared capabilities, neutral lifecycle contracts and the shared bounded supervisor loop. |
+| `componenthost/durable` | Owner-scoped migration, restore, inspection and data-drop capabilities; no storage handles. |
+| `componenthost/resources` | Local configured identity, listen normalization and deterministic revisions; observations remain unknown. |
+| `componenthost/health` | Revision-bound evidence values and freshness validation; the caller retains its Health registry. |
+| `componenthost/publicsurface` | Managed public request context and classified observations; the caller retains routing and delivery. |
 | `coreruntime` | Bounded runtime group selection through an admitted owner lease, with observation and before-image recovery. |
 | `scheduler` | Cancellation and drain behavior for existing scheduled jobs, using an injected operation lease. |
 | `secretref` and `operationref` | Scoped owner-use references and masked operation correlation. |
