@@ -22,7 +22,7 @@
 | `coreruntime` | Bounded runtime group selection through an admitted owner lease, with observation and before-image recovery. |
 | `coreruntime/inboundcontrol` | Typed inbound fallback snapshots and exact checkpoint operations; capability resolution, engine pins, database hooks and runtime execution stay with the Core owner. |
 | `scheduler` | Cancellation and drain behavior for existing scheduled jobs, using an injected operation lease. |
-| `secretref` and `operationref` | Scoped owner-use references and masked operation correlation. |
+| `secretref` and `operationref` | Scoped owner-use references, masked operation correlation and finite owner-controlled read views. |
 | `auditrecord` and `observation` | Existing neutral audit events and sample/history projections. |
 | `componentkit/telegram` | Stateless Bot API request, response and retry helpers for independent callers. |
 | `redact` and `httpheader` | Shared secret redaction and bounded text sanitization. |

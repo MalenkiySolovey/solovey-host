@@ -1501,6 +1501,47 @@
       "destinationSHA256": "30ab5a8cca58dbed1eead24cad2c99b5137f253e2d9006f9736a8735b089caeb",
       "adaptation": "New independent negative cases around the existing endpoint predicate; not a copy of the Product integration tests.",
       "additionalSources": []
+    },
+    {
+      "source": "internal/ops/operationcoordination/change.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "ebf61f4cd97f26db133dd1d76256f329de4afe1e",
+      "originalSHA256": "4a32f7e82ab0e660326ffda2813525c90491629d4440828706c8106162538f24",
+      "history": [
+        "212a69dfdaf60faa3f8626eac878638daf40bb6a\t2026-11-09T18:25:28+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdopt shared component contracts and preserve Panel owner adapters",
+        "df28bf14608790298711745f85db6733a73eda2e\t2026-10-18T16:20:01+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tConverge Update and Data Change coordination"
+      ],
+      "group": "operation-read-views",
+      "destination": "operationref/views.go",
+      "destinationSHA256": "ba762ec6ba6a00cedc29bab269450dbe65e6d5d2836980606acea9cfc11d6bb0",
+      "adaptation": "Existing finite read values, bounded Problem code projection and ProjectJob only. Actual journal, transaction, revision fences, transition decisions, scheduling and cancellation remain with existing owners.",
+      "additionalSources": [
+        {
+          "source": "internal/ops/operationcoordination/job.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "781b78b39b89659546c49efbaafd7e0626c90138",
+          "originalSHA256": "51edd7dd15cf222efaf8d0d589b4eccc56eb8b5ac2108a894b92d95792324046",
+          "history": [
+            "c50fd7237650b203c8a974550982afac54f6b8ae\t2026-10-18T16:54:55+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tConverge bounded operation journal and audit correlation",
+            "8e74244098afc51c6e79129326f065423190dfef\t2026-10-18T16:42:33+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tProject durable Update and Data operations as common Jobs"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "internal/ops/operationcoordination/job.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "781b78b39b89659546c49efbaafd7e0626c90138",
+      "originalSHA256": "51edd7dd15cf222efaf8d0d589b4eccc56eb8b5ac2108a894b92d95792324046",
+      "history": [
+        "c50fd7237650b203c8a974550982afac54f6b8ae\t2026-10-18T16:54:55+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tConverge bounded operation journal and audit correlation",
+        "8e74244098afc51c6e79129326f065423190dfef\t2026-10-18T16:42:33+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tProject durable Update and Data operations as common Jobs"
+      ],
+      "group": "operation-read-views",
+      "destination": "operationref/views_test.go",
+      "destinationSHA256": "71a6f26951fb188ad4fcb69b0c8f59cec21a7207f067e10b06ba8569f8af108a",
+      "adaptation": "New independent negative coverage for raw/unbounded problem input, fictitious cancellation/deadline/progress and owner terminal outcome retention.",
+      "additionalSources": []
     }
   ],
   "fixtures": {
