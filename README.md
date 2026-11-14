@@ -10,7 +10,11 @@
 | `networkidentity` | Address classification, evidence freshness, bounded snapshots and deterministic revisions. |
 | `componenthost` and `componenthost/manifest` | Validated component descriptors, declared capabilities, neutral lifecycle contracts and the shared bounded supervisor loop. |
 | `componenthost/durable` | Owner-scoped migration, restore, inspection and data-drop capabilities; no storage handles. |
-| `componenthost/resources` | Local configured identity, listen normalization and deterministic revisions; observations remain unknown. |
+| `componenthost/resources` | Protected resource and endpoint values, configured identity, listen normalization, management/recovery freshness and deterministic revisions. |
+| `componenthost/hostsurface` | Socket, process, service and listener-owner evidence values with exact identity and freshness validation. |
+| `componenthost/deploymentidentity` | Supervisor-neutral expected application-owner value; installed proof loading stays with deployment adapters. |
+| `componenthost/fallbacktargets` | Bounded fallback target reference with publication, endpoint, Health and capacity revisions. |
+| `network/intent` | Shared value-only network intent vocabulary; allocation, accepted plans and execution remain with Network Planner. |
 | `componenthost/health` | Revision-bound evidence values and freshness validation; the caller retains its Health registry. |
 | `componenthost/publicsurface` | Managed public request context and classified observations; the caller retains routing and delivery. |
 | `coreruntime` | Bounded runtime group selection through an admitted owner lease, with observation and before-image recovery. |
@@ -37,6 +41,21 @@ snapshot = networkidentity.Finalize(snapshot, time.Now())
 ```
 
 The `solovey-ui/host-network-identity/v1` JSON identity is preserved for compatibility. This library supplies no observation loop, network listener or remote management service. Panel authentication, databases, routing policy, component business logic and product releases remain with their respective owners.
+
+Protected resources expose their configured tuple through
+`resource.ConfiguredResource()`. The existing
+`LocalConfiguredIdentity(ConfiguredResource)` and `identity.ValidFor(ConfiguredResource)`
+APIs keep the same signatures. A configured identity establishes no observed
+socket ownership. `ConfiguredListenIntents`, `PreservationEndpointKeys` and
+management/recovery validators preserve conservative coverage and reject
+incomplete or stale evidence. Callers retain observation, registration and
+authorization. A sealed listener-owner value is evidence to validate against
+the trusted producer and current revisions, never an execution grant.
+
+`network/intent` contains the existing typed fields and JSON representations.
+Feature policy builds desired values; the existing Planner checks current
+Host, resource, owner, revision and generation before admitting a plan. The
+package supplies no Planner, accepted receipt, executor or mutable registry.
 
 ## Development
 
