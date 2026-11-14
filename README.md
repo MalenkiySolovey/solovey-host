@@ -10,13 +10,13 @@
 | `networkidentity` | Address classification, evidence freshness, bounded snapshots and deterministic revisions. |
 | `componenthost` and `componenthost/manifest` | Validated component descriptors, declared capabilities, neutral lifecycle contracts and the shared bounded supervisor loop. |
 | `componenthost/durable` | Owner-scoped migration, restore, inspection and data-drop capabilities; no storage handles. |
-| `componenthost/resources` | Protected resource and endpoint values, configured identity, listen normalization, management/recovery freshness and deterministic revisions. |
+| `componenthost/resources` | Protected resource and endpoint values, exact Fronting/local-proxy/interception references, transport facts and bounded lease/CAS validation; registries and provider execution stay with their owners. |
 | `componenthost/hostsurface` | Socket, process, service and listener-owner evidence values with exact identity and freshness validation. |
 | `componenthost/deploymentidentity` | Supervisor-neutral expected application-owner value; installed proof loading stays with deployment adapters. |
 | `componenthost/fallbacktargets` | Bounded target facts, exact references, provider requests and reservation CAS validation; registry and provider storage stay with their owners. |
 | `network/intent` | Shared value-only network intent vocabulary; allocation, accepted plans and execution remain with Network Planner. |
 | `network/nftcontract` | Existing bounded NFT adapter request/result values; path admission, managed-table validation, execution, observation and rollback remain with the platform owner. |
-| `componenthost/health` | Revision-bound evidence values and freshness validation; the caller retains its Health registry. |
+| `componenthost/health` | Revision-bound evidence and typed protocol/local-proxy/interception probe values with exact identity and freshness validation; the caller retains registration, replay/generation state and probe execution. |
 | `componenthost/publicsurface` | Managed public request context and classified observations; the caller retains routing and delivery. |
 | `coreruntime` | Bounded runtime group selection through an admitted owner lease, with observation and before-image recovery. |
 | `coreruntime/inboundcontrol` | Typed inbound fallback snapshots and exact checkpoint operations; capability resolution, engine pins, database hooks and runtime execution stay with the Core owner. |
@@ -64,6 +64,13 @@ feature declarations and the authorized platform adapter can share the same
 types. Constructing a request grants no authority. The adapter still validates
 the exact managed root, table, current revision, lock and rollback evidence
 before executing an admitted operation.
+
+Resource lease requests carry exact references and revisions. Pure transition
+validation admits no owner or endpoint by itself: the provider retains its
+reservation store and applies the same owner checks. Probe values bind evidence
+to the target, provider instance, operation, mutation marker, challenge and
+generation. Their validators perform no network activity. The registered owner
+retains replay prevention, bounded invocation and actual observation.
 
 ## Development
 
