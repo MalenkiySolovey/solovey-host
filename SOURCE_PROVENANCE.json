@@ -1396,6 +1396,111 @@
           ]
         }
       ]
+    },
+    {
+      "source": "network/planner/plan.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "7ecfc10640c2e7c0a5d45296cd3e48090765c5a0",
+      "originalSHA256": "dd8ae4dbd01e81cafacc73ba5a5312943e2883238f107df89d9ac6e069cce7ab",
+      "history": [
+        "105e1278321eb6e2b966c5ea6a2014f624022b4e\t2026-11-13T21:16:21+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tSeparate protection policy compilation from network execution",
+        "ec864ed22ff5f554a5b957bac7c4bd22daaf028f\t2026-10-19T20:50:47+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): bound owned recovery and retire component nft allocation",
+        "082af18244a1dcfab27ed90cc3c3b7d1b9a14427\t2026-10-19T20:31:57+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): compile protection intents before scoped apply",
+        "2cab248aabfaa84f19e09dcc56e57b3b0f77f114\t2026-10-19T20:04:32+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): add deterministic local planner contract"
+      ],
+      "group": "planner-contracts",
+      "destination": "network/planning/types.go",
+      "destinationSHA256": "190237ef3bae994135e77fc4c05ec67207699fcefe928a5ddd60c4b9f1563eae",
+      "adaptation": "Existing value/error vocabulary and serialized inputs only. Platform availability is projected as its exact string representation; the Backend adapter retains the typed private platform observation. Allocation, comparison and accepted-plan algorithms remain in Product.",
+      "additionalSources": [
+        {
+          "source": "network/planner/rollback.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "b852cbaa8a8c93f0e546b191e8ade1e35126bf9c",
+          "originalSHA256": "d907b840d7e37ad97b7bdff9c62718ad6e7b3a9d9485dadc5450624fca7a2508",
+          "history": [
+            "ec864ed22ff5f554a5b957bac7c4bd22daaf028f\t2026-10-19T20:50:47+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): bound owned recovery and retire component nft allocation"
+          ]
+        },
+        {
+          "source": "internal/deployment/platform_facts.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "fec1d1df33bec9e3347741e367bb85374970f087",
+          "originalSHA256": "d1ba0cd671b7a862d32fde98747f77fa169fa78cef4cf60dc14913db030be8fc",
+          "history": [
+            "bb6185ec674b5981cc229ff28e6e60a843a0bb3c\t2026-10-17T14:00:36+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(deployment): project semantic Local Host platform facts"
+          ]
+        },
+        {
+          "source": "internal/deployment/types.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "d0ba0dc4fcbd227ec0b5f0ec4f3222ee1e163191",
+          "originalSHA256": "8d23a20513aa39264563c390995658abbd2fa3dbf0e1dfb68a4230672ebaa23f",
+          "history": [
+            "c099b01ae5283f2ee5271117e042e51bc166c9ac\t2026-09-14T02:18:00+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tplatform: qualify OpenWrt 25.12.5 support",
+            "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "network/planner/plan.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "7ecfc10640c2e7c0a5d45296cd3e48090765c5a0",
+      "originalSHA256": "dd8ae4dbd01e81cafacc73ba5a5312943e2883238f107df89d9ac6e069cce7ab",
+      "history": [
+        "105e1278321eb6e2b966c5ea6a2014f624022b4e\t2026-11-13T21:16:21+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tSeparate protection policy compilation from network execution",
+        "ec864ed22ff5f554a5b957bac7c4bd22daaf028f\t2026-10-19T20:50:47+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): bound owned recovery and retire component nft allocation",
+        "082af18244a1dcfab27ed90cc3c3b7d1b9a14427\t2026-10-19T20:31:57+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): compile protection intents before scoped apply",
+        "2cab248aabfaa84f19e09dcc56e57b3b0f77f114\t2026-10-19T20:04:32+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): add deterministic local planner contract"
+      ],
+      "group": "planner-contracts",
+      "destination": "network/planning/ports.go",
+      "destinationSHA256": "bf9d41dfe2deaed52f63e7561646f0ae43d7256f152e08c60ab5ffc7ad94f877",
+      "adaptation": "New narrow read interfaces for existing private immutable ProtectionPlan and Accepted handles. Backend rejects foreign concrete handles; no planner implementation or candidate authority moves here.",
+      "additionalSources": [
+        {
+          "source": "network/planner/protection.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "2897d6726f9370f03ce9aa7e10d17fd4bf240dd0",
+          "originalSHA256": "c7f1179e965f7b1f59d86a610616ce0398168ed980fa0197166b4a5815dd0f1e",
+          "history": [
+            "105e1278321eb6e2b966c5ea6a2014f624022b4e\t2026-11-13T21:16:21+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tSeparate protection policy compilation from network execution",
+            "082af18244a1dcfab27ed90cc3c3b7d1b9a14427\t2026-10-19T20:31:57+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): compile protection intents before scoped apply"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "network/planner/protection.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "2897d6726f9370f03ce9aa7e10d17fd4bf240dd0",
+      "originalSHA256": "c7f1179e965f7b1f59d86a610616ce0398168ed980fa0197166b4a5815dd0f1e",
+      "history": [
+        "105e1278321eb6e2b966c5ea6a2014f624022b4e\t2026-11-13T21:16:21+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tSeparate protection policy compilation from network execution",
+        "082af18244a1dcfab27ed90cc3c3b7d1b9a14427\t2026-10-19T20:31:57+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): compile protection intents before scoped apply"
+      ],
+      "group": "planner-contracts",
+      "destination": "network/intent/endpoint.go",
+      "destinationSHA256": "09c142b70e907d797d22444b2bc8d45ce098273b9b20b6aa3f9c7390f194fedc",
+      "adaptation": "Existing bounded typed endpoint predicates, byte-equivalent function bodies with public resource imports. No allocation, policy decision, rendering or execution.",
+      "additionalSources": []
+    },
+    {
+      "source": "network/planner/protection_test.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "f3486d2fafdfd9c9f89dedaaa578e4e80317309b",
+      "originalSHA256": "1b5cc941c96d513bf9d89a5d306b1f97088ea3d37a22b06b50cb4cd84d00cd9a",
+      "history": [
+        "105e1278321eb6e2b966c5ea6a2014f624022b4e\t2026-11-13T21:16:21+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tSeparate protection policy compilation from network execution",
+        "5c5422df35dbae01c1cd7509daf58546280bed18\t2026-10-19T22:35:16+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\ttest(network): qualify semantic resource retirement with active guards",
+        "082af18244a1dcfab27ed90cc3c3b7d1b9a14427\t2026-10-19T20:31:57+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): compile protection intents before scoped apply"
+      ],
+      "group": "planner-contracts",
+      "destination": "network/intent/endpoint_test.go",
+      "destinationSHA256": "30ab5a8cca58dbed1eead24cad2c99b5137f253e2d9006f9736a8735b089caeb",
+      "adaptation": "New independent negative cases around the existing endpoint predicate; not a copy of the Product integration tests.",
+      "additionalSources": []
     }
   ],
   "fixtures": {

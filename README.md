@@ -16,6 +16,7 @@
 | `componenthost/fallbacktargets` | Bounded target facts, exact references, provider requests and reservation CAS validation; registry and provider storage stay with their owners. |
 | `network/intent` | Shared value-only network intent vocabulary; allocation, accepted plans and execution remain with Network Planner. |
 | `network/nftcontract` | Existing bounded NFT adapter request/result values; path admission, managed-table validation, execution, observation and rollback remain with the platform owner. |
+| `network/planning` | Existing coordinator input/error/ownership views and read interfaces for private immutable plan and candidate receipts; allocation, acceptance, comparison and execution remain with the coordinator. |
 | `componenthost/health` | Revision-bound evidence and typed protocol/local-proxy/interception probe values with exact identity and freshness validation; the caller retains registration, replay/generation state and probe execution. |
 | `componenthost/publicsurface` | Managed public request context and classified observations; the caller retains routing and delivery. |
 | `coreruntime` | Bounded runtime group selection through an admitted owner lease, with observation and before-image recovery. |

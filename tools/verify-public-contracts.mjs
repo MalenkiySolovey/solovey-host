@@ -91,4 +91,20 @@ for(const file of providers){
   assert.ok(!/type\s+\w*Registry|var\s+Default|New\w*Registry|\bgo\s+func|time\.NewTicker|net\.(?:Listen|Dial)/.test(source),'mutable owner or execution in provider/probe contracts: '+file.destination)
  }
 }
-console.log(JSON.stringify({status:'PASS',contracts:[...files,...neutral,...owners,...networkWire,...providers].map(file=>file.destination),license:'GPL-3.0',authority:'retained by owner adapters'}))
+const planners=provenance.files.filter(file=>file.group==='planner-contracts')
+assert.deepEqual(planners.map(file=>file.destination).sort(),[
+ 'network/planning/types.go','network/planning/ports.go','network/intent/endpoint.go','network/intent/endpoint_test.go',
+].sort(),'coordinator contract provenance must be complete')
+for(const file of planners){
+ const source=fs.readFileSync(file.destination,'utf8')
+ assert.equal(createHash('sha256').update(source).digest('hex'),file.destinationSHA256,'coordinator contract source drift: '+file.destination)
+ assert.match(file.originalCommit,/^[a-f0-9]{40}$/);assert.match(file.originalBlob,/^[a-f0-9]{40}$/);assert.ok(file.history.length>0)
+ for(const extra of file.additionalSources){assert.match(extra.originalBlob,/^[a-f0-9]{40}$/);assert.ok(extra.history.length>0)}
+ assert.ok(!/github.com\/MalenkiySolovey\/solovey-ui\/|gorm.io|gin-gonic|database\/sql|os\/exec|syscall|golang.org\/x\/sys|"sync(?:\/atomic)?"|"reflect"|\bvar\s/.test(source),'concrete coordinator/platform/registry authority in public contracts')
+ if(file.destination.startsWith('network/planning/')) {
+  assert.ok(!/^func\s+[A-Za-z_]/m.test(source),'coordinator algorithms must remain with their owner')
+  assert.ok(!/\bany\b|interface\s*\{\s*\}/.test(source),'untyped coordinator context is forbidden')
+ }
+ if(file.destination==='network/intent/endpoint.go') assert.deepEqual([...source.matchAll(/^func\s+(\w+)\(/gm)].map(m=>m[1]).sort(),['ValidProtectionEndpoint','validEndpoint'],'only bounded endpoint predicates may move')
+}
+console.log(JSON.stringify({status:'PASS',contracts:[...files,...neutral,...owners,...networkWire,...providers,...planners].map(file=>file.destination),license:'GPL-3.0',authority:'retained by owner adapters'}))
