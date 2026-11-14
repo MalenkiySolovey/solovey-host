@@ -919,6 +919,165 @@
       "history": [
         "c099b01ae5283f2ee5271117e042e51bc166c9ac\t2026-09-14T02:18:00+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tplatform: qualify OpenWrt 25.12.5 support"
       ]
+    },
+    {
+      "source": "componenthost/fallbacktargets/contracts_v2.go",
+      "destination": "componenthost/fallbacktargets/canonical.go",
+      "originalCommit": "9ad094b07f65ac23ddc10b496e95658c82dab24e",
+      "originalBlob": "bf777e9747cb85103835a56b98534e8079199d9c",
+      "originalSHA256": "2d1b861a01000be53bd1a4d5f6dd17dd57b47c66decdb60a9b8f5401eeef42a7",
+      "destinationSHA256": "b2d8d812c9f460959964904fc04808f5d35389e268432ee5f38b760dd7ebb75d",
+      "adaptation": "New typed wrappers around the existing canonical target/reservation validation; no new owner.",
+      "history": [
+        "cd29daa94fe481b576e333b1b0d141ba36a47a6d\t2026-11-14T06:46:35+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tConsume public Host protection contracts and close portable policy source",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "additionalSources": [
+        {
+          "source": "componenthost/fallbacktargets/reservations_v1.go",
+          "originalBlob": "f8599fe5c851b0a5326d35b0057f55b089ee3cf6"
+        }
+      ]
+    },
+    {
+      "source": "componenthost/fallbacktargets/contracts_v2.go",
+      "destination": "componenthost/fallbacktargets/contracts_v2.go",
+      "originalCommit": "9ad094b07f65ac23ddc10b496e95658c82dab24e",
+      "originalBlob": "bf777e9747cb85103835a56b98534e8079199d9c",
+      "originalSHA256": "2d1b861a01000be53bd1a4d5f6dd17dd57b47c66decdb60a9b8f5401eeef42a7",
+      "destinationSHA256": "4680560e35bc5e3d1cbdbd66ee8305e0276b38c00b7cfc68f6dbf41205b845ad",
+      "adaptation": "Public Host resource values and existing exact reference; registry and provider execution excluded.",
+      "history": [
+        "cd29daa94fe481b576e333b1b0d141ba36a47a6d\t2026-11-14T06:46:35+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tConsume public Host protection contracts and close portable policy source",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "componenthost/fallbacktargets/contracts_v2_test.go",
+      "destination": "componenthost/fallbacktargets/provider_contracts_test.go",
+      "originalCommit": "9ad094b07f65ac23ddc10b496e95658c82dab24e",
+      "originalBlob": "ba978f59190806e6e763639e5db74cb15c371f95",
+      "originalSHA256": "208b141ded73c06e6c801feb356965aadc78405ce1fd6f8ce0f9fb0f510071b5",
+      "destinationSHA256": "14ce6ab065908aefbf3754af686a2242efd618c7dce9d58ef5c5a19054796d9d",
+      "adaptation": "Existing pure target/reservation tests and required fixtures; Product registry integration tests stay with Product.",
+      "history": [
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "additionalSources": [
+        {
+          "source": "componenthost/fallbacktargets/contracts_v2_regression_test.go",
+          "originalBlob": "56dcd0f27ef6d515fefb4dfb84322db868f3cb8f"
+        }
+      ]
+    },
+    {
+      "source": "componenthost/fallbacktargets/provider_v2.go",
+      "destination": "componenthost/fallbacktargets/provider_v2.go",
+      "originalCommit": "9ad094b07f65ac23ddc10b496e95658c82dab24e",
+      "originalBlob": "6e794808cbdfdd22932e200f5710ffeb5e50d81e",
+      "originalSHA256": "33c64851a3a3456cf3d804aae5a9397f1c173304a45b176370c070b29c591391",
+      "destinationSHA256": "ae0d4a34ac191241d7512d67392bd8ca0ce940823c9895377e76626105498b36",
+      "adaptation": "Typed requests, bounded validation, provider declaration and owner inventory result values only.",
+      "history": [
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "additionalSources": [
+        {
+          "source": "componenthost/fallbacktargets/registry_v2.go",
+          "originalBlob": "c48f8b9817ab1efd3bfc8f6f64da00dea58dfaf1"
+        }
+      ]
+    },
+    {
+      "source": "componenthost/fallbacktargets/reservations_v1.go",
+      "destination": "componenthost/fallbacktargets/reservations_v1.go",
+      "originalCommit": "9ad094b07f65ac23ddc10b496e95658c82dab24e",
+      "originalBlob": "f8599fe5c851b0a5326d35b0057f55b089ee3cf6",
+      "originalSHA256": "29817295ff296400b18ac583b134a47f53c96b6445539b8cf2704d7506410092",
+      "destinationSHA256": "feca5f4bb37c5a9d6fc2f10762de23c94174d39de5fe76b41eddd08c91801ce8",
+      "adaptation": "Existing pure reservation CAS, replay, freshness and transition validation.",
+      "history": [
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "componenthost/fallbacktargets/contracts.go",
+      "destination": "componenthost/fallbacktargets/target_identity.go",
+      "originalCommit": "9ad094b07f65ac23ddc10b496e95658c82dab24e",
+      "originalBlob": "bf10f3d0fb9e8c9e876126df7558677f3094940f",
+      "originalSHA256": "0d8702e01ce1b0618e1575669bd5397ea04cc180877990640354a7062aff02ca",
+      "destinationSHA256": "da82cab8691f01c7f21ffa73d9363e9b8aeafc8a58c5f21a24b69fbcd87531d3",
+      "adaptation": "Readiness and target identity values only; registry, lease store and legacy provider implementation excluded.",
+      "history": [
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "service/coreinboundcontrol/patch_types.go",
+      "destination": "coreruntime/inboundcontrol/patch_types.go",
+      "originalCommit": "9ad094b07f65ac23ddc10b496e95658c82dab24e",
+      "originalBlob": "eb886cb5576094e9dfbf2110e17c74571e40d96f",
+      "originalSHA256": "7c390ebb703d06cb209b6cd709dbe8f83a42c6f0e87f586cfc2e39aee705206d",
+      "destinationSHA256": "c5c0557e02fda1aa88d1fabe7229ab48d04e8eb0f51434226832f2dc4a748d19",
+      "adaptation": "Typed checkpoint/fallback values and errors only; SQL hooks, transaction callbacks and mutation dependencies excluded.",
+      "history": [
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "components/server-protection/service/nativefallback/interfaces.go",
+      "destination": "coreruntime/inboundcontrol/ports.go",
+      "originalCommit": "9ad094b07f65ac23ddc10b496e95658c82dab24e",
+      "originalBlob": "85db8af31ce226735927756c54a7210ddff31c6d",
+      "originalSHA256": "91fdbd64c26b90a03b75e98538bad46b6eb0e56c66a090e890054a0d9c7081dd",
+      "destinationSHA256": "9e664a33289ce5afba1bdc392f1b59525e5b099caded27c26a35fc54f1624f1a",
+      "adaptation": "Reader and exact checkpoint control interfaces; Core execution remains with its owner.",
+      "history": [
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "service/coreinboundcontrol/types.go",
+      "destination": "coreruntime/inboundcontrol/types.go",
+      "originalCommit": "9ad094b07f65ac23ddc10b496e95658c82dab24e",
+      "originalBlob": "602392ac0b19035f76acbd8a5e7197698e91d50c",
+      "originalSHA256": "5b7a1ad577951fb51abb2f441d0ac63f4c2a28a63b796b75e586c26ef712d8c2",
+      "destinationSHA256": "943122fa190ff1c2a455f60ccbc2784c1d6c4b1b03079f58f1f63640867f1e35",
+      "adaptation": "Snapshot and capability value declarations only; engine pins, build profile identities and resolver implementation revision excluded.",
+      "history": [
+        "3b80e71689aece02c8e20fc60bdd017ece1ac810\t2026-11-05T04:32:34+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tQualify Source64 fallback and respect available limiter choices",
+        "61a8c387f96c5e66272b2bc7c1486730393b859b\t2026-11-04T14:12:16+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tExpose native Amnezia endpoint options and complete private peer delivery",
+        "784cb210e24ae7f1d874fdcff687298bcf3202d8\t2026-10-29T13:20:12+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tQualify Source57 for bounded native fallback identity",
+        "35f0682cd0b25b6433467a817eced8b1ebb20268\t2026-10-29T11:05:25+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tBind fallback identity tuple to the current resolver revision",
+        "3e6b682a6fa87b7acd35107e2b3bae6dfa9cca83\t2026-10-29T10:43:03+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRefresh source-bound resolver and queue identity checks",
+        "279c14d14d61915305b14f244b7751762c93685b\t2026-10-29T00:10:49+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tConsume qualified XHTTP retirement and stock mKCP compatibility",
+        "7f9fe8f7499c4f2c0c0f7f76a7f00dfc611ec676\t2026-10-28T14:40:19+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: qualify mKCP against owned native transport source52",
+        "2c9e337f8f05a053abc90909e614e9e6230cc69c\t2026-10-28T13:55:21+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tbuild: consume accepted XHTTP source queue and qualify native streams",
+        "f400f5d0ba3802a8f199ccf4267bb1d4149da0d9\t2026-10-28T01:42:44+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tPin accepted Sudoku client lifetime and half-close source",
+        "6a6caa30dff7e496194976e8214830c29f36818d\t2026-10-27T21:51:00+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tSelect qualified TrustTunnel response retirement source",
+        "095de8dbd44c35cd5b266741b32d38f521ac4e28\t2026-10-27T21:33:10+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tServe native Mieru and TrustTunnel Outbounds with owned passwords",
+        "8606b91456d21ff93c995507e75b665936ead4cf\t2026-10-27T20:57:24+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tServe native Call joiners through Outbounds and shared private credentials",
+        "52077e9df6c853bf971434cd88043136f63d16d8\t2026-10-27T17:24:13+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tSelect the qualified Call outbound and MTProxy admission source queue",
+        "55e4a5ffeb72c2e4811e381f38363a8ef65c95bb\t2026-10-27T16:37:42+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tConsume qualified Call source through the shared inbound owner and editor",
+        "c038c602b286b5d7f3ef72487c1ef51ae302acac\t2026-10-27T05:21:35+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tCompose native core failover through canonical inbound groups",
+        "301ff7719b628f1d71f9868d676e3de35998ae6a\t2026-10-27T03:55:23+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tCompose native Bond inbounds from canonical member owners",
+        "d1c9edefe236dba34ac64b4f8558902a3e51d874\t2026-10-26T23:14:55+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tServe Sudoku with owned master and delivery credentials",
+        "fafc474a8a7407d400f79aae8732d1730ac7f374\t2026-10-25T22:08:38+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tSeparate core source copies and consume canonical Git patch queues",
+        "15ddf01e047c5c8b9804f4ea6d05727ca2b18ee5\t2026-10-25T16:35:50+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tQualify final-user revocation with the pinned Mieru correction",
+        "44ad9182c2042019138e7719b906b9a41b966414\t2026-10-25T15:53:13+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdd native inbound workflows with Users-owned credentials",
+        "afce4193231101b3161928dd260ce4100f26b7a1\t2026-10-23T21:35:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfix: preserve qualified capability identity under strict artifact checks",
+        "20bd89d777662295f946bf509cfb496527ce5a57\t2026-10-23T18:37:01+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfix: bind core capabilities to qualified provider source identity",
+        "445755fb4ce8ce9fa1a3c500fdbd623ce1b993a8\t2026-10-07T17:13:53+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tMigrate sing-box foundation and nested rules atomically to 1.14.2",
+        "61c851f93daeee162f11348be0653d8d5d313922\t2026-10-06T16:58:23+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tUpdate networking core to sing-box 1.13.18",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "additionalSources": []
     }
   ],
   "fixtures": {
