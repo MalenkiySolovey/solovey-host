@@ -1103,6 +1103,299 @@
           ]
         }
       ]
+    },
+    {
+      "source": "componenthost/resources/fronting_contracts.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "66eb96a2b247a468d11d17a2be6354db8eaa010f",
+      "originalSHA256": "56ffb72bcc87ad4a8e2378c4b74c433eb2a2e75068a16f8690d6b4eb9f4924b1",
+      "history": [
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "group": "resource-and-probe-contracts",
+      "destination": "componenthost/resources/fronting_contracts.go",
+      "destinationSHA256": "56ffb72bcc87ad4a8e2378c4b74c433eb2a2e75068a16f8690d6b4eb9f4924b1",
+      "adaptation": "Existing typed values, exact references, bounded requests and pure CAS/freshness validation; registries and provider execution excluded.",
+      "additionalSources": []
+    },
+    {
+      "source": "componenthost/resources/local_proxy_contracts.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "c1f1f1dcf4ed53f6e0e70b29cc6a5d3627d7ae29",
+      "originalSHA256": "b05c5fba98c050c731019501794a79387cf1da4696f119616a5f5e5266f2fe69",
+      "history": [
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "group": "resource-and-probe-contracts",
+      "destination": "componenthost/resources/local_proxy_contracts.go",
+      "destinationSHA256": "cdb135a4b28dd1cd5b73e7633a9412c8b1c326e88772409d88896b71b9bf94f9",
+      "adaptation": "Existing typed values, exact references, bounded requests and pure CAS/freshness validation; registries and provider execution excluded.",
+      "additionalSources": []
+    },
+    {
+      "source": "componenthost/resources/inbound_transport_v2.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "581c5c1a24c9bd1abec34216f6da022e13cf26b8",
+      "originalSHA256": "e2bc2f0be2603a6d8fcf00d1a7f50743e6c3c5bd5ea651f987a99a7a613bf094",
+      "history": [
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "group": "resource-and-probe-contracts",
+      "destination": "componenthost/resources/inbound_transport_v2.go",
+      "destinationSHA256": "e2bc2f0be2603a6d8fcf00d1a7f50743e6c3c5bd5ea651f987a99a7a613bf094",
+      "adaptation": "Existing typed values, exact references, bounded requests and pure CAS/freshness validation; registries and provider execution excluded.",
+      "additionalSources": []
+    },
+    {
+      "source": "componenthost/resources/interception_contracts.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "5b75bebe9cf1a5c17ea1070e53234eec82425fa2",
+      "originalSHA256": "bf2bb1987d3c5ca2e01e1cd68d1a2661432c107b242bb58b5a04aca116eb6dbe",
+      "history": [
+        "da6d912a7f548670286bd76746b25a97a9b42da9\t2026-10-24T02:22:48+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfix: qualify broker as root and stabilize lifecycle CI fixtures",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "group": "resource-and-probe-contracts",
+      "destination": "componenthost/resources/interception_contracts.go",
+      "destinationSHA256": "bf2bb1987d3c5ca2e01e1cd68d1a2661432c107b242bb58b5a04aca116eb6dbe",
+      "adaptation": "Existing typed values, exact references, bounded requests and pure CAS/freshness validation; registries and provider execution excluded.",
+      "additionalSources": []
+    },
+    {
+      "source": "componenthost/resources/fronting_contracts_test.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "de59597ab363ab900dc66c70df4368bda0f54537",
+      "originalSHA256": "a929da93a4d4bf0c74b356efa2f7a7000a8a04196c2509ad07f428335b3828dd",
+      "history": [
+        "391cf40683ba06b91cda690c886b331815c5d272\t2026-08-15T09:52:31+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\ttest: make fronting redaction checks structural",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "group": "resource-and-probe-contracts",
+      "destination": "componenthost/resources/provider_contracts_test.go",
+      "destinationSHA256": "024675dfb024a2cd423bb9f53a904405a912ef568e4dbdef676769f89d68c32f",
+      "adaptation": "Thirteen existing independent contract tests and their helpers. Two actual registry integration tests remain in Product.",
+      "additionalSources": [
+        {
+          "source": "componenthost/resources/local_proxy_contracts_test.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "2aa32cbab82a771e48655bbf0b7e73aac7172fcd",
+          "originalSHA256": "d771ee89cb284ccef85ba6a3c54b71828d165a3f3babcc7a5f7fade0cf472bf0",
+          "history": [
+            "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+          ]
+        },
+        {
+          "source": "componenthost/resources/inbound_transport_v2_test.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "3304f31d0024790a0efd4cdcc028878382ec4e87",
+          "originalSHA256": "645e4bdc478146dc688273422e4523ea28b81f98282b5d6efeb9869eec1ec741",
+          "history": [
+            "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+          ]
+        },
+        {
+          "source": "componenthost/resources/interception_contracts_test.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "0dbf30a74b44a5231c61523fb657dda0f6519182",
+          "originalSHA256": "a085403919a8fd37878746b7f60a013789e9ecfd563ea069dfde7e0497d5b61e",
+          "history": [
+            "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "componenthost/resources/inbound_transport_v2_test.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "3304f31d0024790a0efd4cdcc028878382ec4e87",
+      "originalSHA256": "645e4bdc478146dc688273422e4523ea28b81f98282b5d6efeb9869eec1ec741",
+      "history": [
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "group": "resource-and-probe-contracts",
+      "destination": "componenthost/resources/transport_boundary_test.go",
+      "destinationSHA256": "f05dde963bf01aae8a7a09734a94387edb713a16fe355aaf1a4aaa8c4c495e32",
+      "adaptation": "New independent negative tests use the existing transport fixture to cover missing identity, expiry, contradictory networks and non-actionable UNKNOWN evidence.",
+      "additionalSources": []
+    },
+    {
+      "source": "componenthost/health/protocol_probe.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "58f2562cf8639a17c0226c92f859a0ce0ceb7828",
+      "originalSHA256": "759ed7ab72a2f3c4ed5341fe00a09ae19d3b8a425275ce140fd9ce8c833b5169",
+      "history": [
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "group": "resource-and-probe-contracts",
+      "destination": "componenthost/health/protocol_probe_contracts.go",
+      "destinationSHA256": "2f4c5ddd143648b6244b48b023c80072ae79937996b9e8e33e608baea7b5c00c",
+      "adaptation": "Typed probe declarations and existing pure canonical validation only; registry state, generation/replay maps, provider invocation, goroutines and timeout execution excluded.",
+      "additionalSources": []
+    },
+    {
+      "source": "componenthost/health/local_proxy_probe.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "ed89d40f97f2398cbf012b36756ef6659d0e5ed2",
+      "originalSHA256": "f1981fde97291dcae613dc0d0b63ab08616fa183fe2d573ace29cc1d8c4b7edb",
+      "history": [
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "group": "resource-and-probe-contracts",
+      "destination": "componenthost/health/local_proxy_probe_contracts.go",
+      "destinationSHA256": "fb3ba7f54df463f322131df708bd75724be03aa5bc7070f444436693e048452b",
+      "adaptation": "Typed local proxy probe declarations and existing pure validation only; registered execution and replay authority stay with their owner.",
+      "additionalSources": []
+    },
+    {
+      "source": "componenthost/health/interception_probe.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "aed572d355d64221831f7e50f51d49f85c65f15c",
+      "originalSHA256": "7d127ef13bab9ba76ebc2d5fe04510b85058a22ee568b02ffe844fcc0f3370c7",
+      "history": [
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "group": "resource-and-probe-contracts",
+      "destination": "componenthost/health/interception_probe_contracts.go",
+      "destinationSHA256": "cd78a6a01cdde93c5b0e6b99cbd2493595790ff18f32a70801b45c61f8b78fde",
+      "adaptation": "Typed interception probe declarations and existing pure validation only. Reuses byte-identical healthToken already in public evidence validation; no copied registry or worker.",
+      "additionalSources": []
+    },
+    {
+      "source": "componenthost/health/registry.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "b4be41bd8560c0380e9b19ce3ee5a4d179713b48",
+      "originalSHA256": "6d0c46125d0f3a53e741552cb860ac6d3085372b3d59dd6a757db3ed341a57a3",
+      "history": [
+        "600695e15a04f3fd10e43a7441d9295ceeff893c\t2026-11-13T06:14:01+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tConsume the independent Fallback component source",
+        "e00a1777966a5b2cfad5258599ef061037bcc0bb\t2026-10-18T16:36:46+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tEvolve existing Health registry with revision-bound evidence",
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "group": "resource-and-probe-contracts",
+      "destination": "componenthost/health/bounds.go",
+      "destinationSHA256": "61417b39aa750eee304d6464a3235ffa921d2cacba25229723cef3e85132e4a8",
+      "adaptation": "Existing five-second registered Health deadline constant only.",
+      "additionalSources": []
+    },
+    {
+      "source": "componenthost/health/protocol_probe.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "58f2562cf8639a17c0226c92f859a0ce0ceb7828",
+      "originalSHA256": "759ed7ab72a2f3c4ed5341fe00a09ae19d3b8a425275ce140fd9ce8c833b5169",
+      "history": [
+        "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "group": "resource-and-probe-contracts",
+      "destination": "componenthost/health/probe_validation.go",
+      "destinationSHA256": "58ac62432319a03585fe3c687a618a5b4b79b1d5419cc106de8684866e66ccee",
+      "adaptation": "Narrow public wrappers around the unchanged pure protocol/local-proxy validators; no implementation or authority duplicated.",
+      "additionalSources": [
+        {
+          "source": "componenthost/health/local_proxy_probe.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "ed89d40f97f2398cbf012b36756ef6659d0e5ed2",
+          "originalSHA256": "f1981fde97291dcae613dc0d0b63ab08616fa183fe2d573ace29cc1d8c4b7edb",
+          "history": [
+            "6a99d0e4fe4c7047f0eca3ff96159ce4bdc93f13\t2026-08-15T02:57:14+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor: finalize architecture and release hardening",
+            "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "componenthost/health/protocol_probe_test.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "bcc03aa608902d829f454b2f5884ae256138fb3c",
+      "originalSHA256": "ba854e86756b28844e5b5f995458fb7561dd5023a29a8a9d0c23732625775319",
+      "history": [
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "group": "resource-and-probe-contracts",
+      "destination": "componenthost/health/probe_value_fixtures_test.go",
+      "destinationSHA256": "43237b2105361c1b9ba683b03b421edc5d221330aca0a58a5a6da413290f0d77",
+      "adaptation": "Existing typed fixtures and semantic revision test; actual registry integration tests remain in Product.",
+      "additionalSources": [
+        {
+          "source": "componenthost/health/local_proxy_probe_test.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "fc4d862770b86bd7d709d8d3273ed8b816dc876f",
+          "originalSHA256": "757c6b414f371d400727ab6d70a28e2f862d90b9ea3b025e28a53675136f8af9",
+          "history": [
+            "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+          ]
+        },
+        {
+          "source": "componenthost/health/interception_probe_test.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "7526d4be3788b2e4a2bb158f8cc38bbdc1ed3ff7",
+          "originalSHA256": "9177d81808000b7148d3ab4530431d0be447a3d5f87bbce376ae91b482d42733",
+          "history": [
+            "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "componenthost/health/protocol_probe_test.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "bcc03aa608902d829f454b2f5884ae256138fb3c",
+      "originalSHA256": "ba854e86756b28844e5b5f995458fb7561dd5023a29a8a9d0c23732625775319",
+      "history": [
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "group": "resource-and-probe-contracts",
+      "destination": "componenthost/health/probe_validation_test.go",
+      "destinationSHA256": "dbc127e215fd28ce2d1853b70f58386d1a06d829ba9634fe82f4ca5b18705252",
+      "adaptation": "New independent negative tests use the existing typed fixtures to reject foreign resources/instances, old generations, wrong challenges, pre-mutation evidence, stale leases and wrong sinks.",
+      "additionalSources": [
+        {
+          "source": "componenthost/health/local_proxy_probe_test.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "fc4d862770b86bd7d709d8d3273ed8b816dc876f",
+          "originalSHA256": "757c6b414f371d400727ab6d70a28e2f862d90b9ea3b025e28a53675136f8af9",
+          "history": [
+            "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "componenthost/resources/fronting_contracts.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "66eb96a2b247a468d11d17a2be6354db8eaa010f",
+      "originalSHA256": "56ffb72bcc87ad4a8e2378c4b74c433eb2a2e75068a16f8690d6b4eb9f4924b1",
+      "history": [
+        "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+      ],
+      "group": "resource-and-probe-contracts",
+      "destination": "componenthost/resources/provider_validation.go",
+      "destinationSHA256": "39fa1731b5d86848537187e7d7767ea662d33d8a150353fc0d86d7f864b1bd22",
+      "adaptation": "Three narrow wrappers expose the same pure bounded token predicates to the actual owner registries; no validation implementation or registration authority duplicated.",
+      "additionalSources": [
+        {
+          "source": "componenthost/resources/inbound_transport_v2.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "581c5c1a24c9bd1abec34216f6da022e13cf26b8",
+          "originalSHA256": "e2bc2f0be2603a6d8fcf00d1a7f50743e6c3c5bd5ea651f987a99a7a613bf094",
+          "history": [
+            "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+          ]
+        },
+        {
+          "source": "componenthost/resources/interception_contracts.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "5b75bebe9cf1a5c17ea1070e53234eec82425fa2",
+          "originalSHA256": "bf2bb1987d3c5ca2e01e1cd68d1a2661432c107b242bb58b5a04aca116eb6dbe",
+          "history": [
+            "da6d912a7f548670286bd76746b25a97a9b42da9\t2026-10-24T02:22:48+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfix: qualify broker as root and stabilize lifecycle CI fixtures",
+            "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
+          ]
+        }
+      ]
     }
   ],
   "fixtures": {

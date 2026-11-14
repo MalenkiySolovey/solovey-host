@@ -62,4 +62,33 @@ for(const file of networkWire){
   ['Correlation','NFTApplyRequest','NFTObserveRequest','NFTResult','NFTRollbackRequest','NFTSupport','NFTValidateRequest'].sort(),'network wire vocabulary is closed')
  assert.ok(!/Planner|Executor|ManagedRoot|type\s+\w+\s+interface\s*\{/.test(source.replace(/^\/\/.*$/gm,'')),'execution authority in network wire')
 }
-console.log(JSON.stringify({status:'PASS',contracts:[...files,...neutral,...owners,...networkWire].map(file=>file.destination),license:'GPL-3.0',authority:'retained by owner adapters'}))
+const providers=provenance.files.filter(file=>file.group==='resource-and-probe-contracts')
+assert.deepEqual(providers.map(file=>file.destination).sort(),[
+ 'componenthost/resources/fronting_contracts.go',
+ 'componenthost/resources/local_proxy_contracts.go',
+ 'componenthost/resources/inbound_transport_v2.go',
+ 'componenthost/resources/interception_contracts.go',
+ 'componenthost/resources/provider_contracts_test.go',
+ 'componenthost/resources/provider_validation.go',
+ 'componenthost/resources/transport_boundary_test.go',
+ 'componenthost/health/protocol_probe_contracts.go',
+ 'componenthost/health/local_proxy_probe_contracts.go',
+ 'componenthost/health/interception_probe_contracts.go',
+ 'componenthost/health/bounds.go',
+ 'componenthost/health/probe_validation.go',
+ 'componenthost/health/probe_value_fixtures_test.go',
+ 'componenthost/health/probe_validation_test.go',
+].sort(),'provider/probe source provenance must be complete')
+for(const file of providers){
+ const source=fs.readFileSync(file.destination,'utf8')
+ assert.equal(createHash('sha256').update(source).digest('hex'),file.destinationSHA256,'provider/probe source drift: '+file.destination)
+ assert.match(file.originalCommit,/^[a-f0-9]{40}$/)
+ assert.match(file.originalBlob,/^[a-f0-9]{40}$/)
+ assert.ok(file.history.length>0)
+ for(const extra of file.additionalSources){assert.match(extra.originalBlob,/^[a-f0-9]{40}$/);assert.ok(extra.history.length>0)}
+ assert.ok(!/github.com\/MalenkiySolovey\/solovey-ui\/|gorm.io|gin-gonic|database\/sql|os\/exec|syscall|golang.org\/x\/sys|"sync(?:\/atomic)?"/.test(source),'private, storage, process or registry dependency: '+file.destination)
+ if(!file.destination.endsWith('_test.go')){
+  assert.ok(!/type\s+\w*Registry|var\s+Default|New\w*Registry|\bgo\s+func|time\.NewTicker|net\.(?:Listen|Dial)/.test(source),'mutable owner or execution in provider/probe contracts: '+file.destination)
+ }
+}
+console.log(JSON.stringify({status:'PASS',contracts:[...files,...neutral,...owners,...networkWire,...providers].map(file=>file.destination),license:'GPL-3.0',authority:'retained by owner adapters'}))
