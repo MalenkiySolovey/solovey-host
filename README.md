@@ -15,6 +15,7 @@
 | `componenthost/deploymentidentity` | Supervisor-neutral expected application-owner value; installed proof loading stays with deployment adapters. |
 | `componenthost/fallbacktargets` | Bounded target facts, exact references, provider requests and reservation CAS validation; registry and provider storage stay with their owners. |
 | `network/intent` | Shared value-only network intent vocabulary; allocation, accepted plans and execution remain with Network Planner. |
+| `network/nftcontract` | Existing bounded NFT adapter request/result values; path admission, managed-table validation, execution, observation and rollback remain with the platform owner. |
 | `componenthost/health` | Revision-bound evidence values and freshness validation; the caller retains its Health registry. |
 | `componenthost/publicsurface` | Managed public request context and classified observations; the caller retains routing and delivery. |
 | `coreruntime` | Bounded runtime group selection through an admitted owner lease, with observation and before-image recovery. |
@@ -57,6 +58,12 @@ the trusted producer and current revisions, never an execution grant.
 Feature policy builds desired values; the existing Planner checks current
 Host, resource, owner, revision and generation before admitting a plan. The
 package supplies no Planner, accepted receipt, executor or mutable registry.
+
+`network/nftcontract` preserves the existing wire fields and JSON identities so
+feature declarations and the authorized platform adapter can share the same
+types. Constructing a request grants no authority. The adapter still validates
+the exact managed root, table, current revision, lock and rollback evidence
+before executing an admitted operation.
 
 ## Development
 

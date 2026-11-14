@@ -1078,6 +1078,31 @@
         "cb44ec3833acbc2d01ef4b6fba232aa97878fbf0\t2026-08-12T00:37:51+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: ship Solovey UI 2026.3.0"
       ],
       "additionalSources": []
+    },
+    {
+      "source": "network/nftables/types.go",
+      "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+      "originalBlob": "3dc676c9a32c2663b03cc9332e30e4c0a4ad3471",
+      "originalSHA256": "0d5d07a6b905060d7b4218f611d37089ea8baffcf97ff1144c766d854b8edc12",
+      "history": [
+        "dbb6ebc14feeb0033ee334afa8ebd5b840d71fcc\t2026-10-19T20:20:48+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(network): move scoped nft adapter into core"
+      ],
+      "destination": "network/nftcontract/types.go",
+      "destinationSHA256": "e06ea1fdb6535e6b2e6a7e7bedcc8a81683d4a9516da23c69a248aa59d5445d4",
+      "adaptation": "Only seven existing typed wire values and three bounds; NFTSupport combined from platform support declarations. Field types, ordering, JSON tags and limits are unchanged. No imports, functions, state, Planner receipts, path validation, rendering, executor or cleanup authority.",
+      "additionalSources": [
+        {
+          "source": "network/nftables/nft_backend.go",
+          "originalCommit": "9ae0d31a96e84a862ca4effefb81b2efc6174992",
+          "originalBlob": "c97f81cab3900fbeb26020919fa4e2d1e9e4c244",
+          "originalSHA256": "ca2b510e198026ab47e15322eb058e61786539e3b791d9e3c6c1eafaf7e51eda",
+          "history": [
+            "ded41e5436d06e4e440442a5d5453381e327a792\t2026-10-19T22:46:55+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfix(network): preserve unowned allocations during package cleanup",
+            "ec864ed22ff5f554a5b957bac7c4bd22daaf028f\t2026-10-19T20:50:47+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(network): bound owned recovery and retire component nft allocation",
+            "dbb6ebc14feeb0033ee334afa8ebd5b840d71fcc\t2026-10-19T20:20:48+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(network): move scoped nft adapter into core"
+          ]
+        }
+      ]
     }
   ],
   "fixtures": {

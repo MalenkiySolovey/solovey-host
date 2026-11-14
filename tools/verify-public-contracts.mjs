@@ -46,4 +46,20 @@ for(const file of owners){
  assert.ok(!/type (?:Registry|Planner|Workflow|MutationDependencies|MutationHooks|CandidateHydrator)|var Default|func (?:Register|LoadInstalled|RecheckInstalled)|net\.(?:Listen|Dial)|tls\.Certificate/.test(source),'concrete authority in owner contract: '+file.destination)
  assert.ok(!/^\s*Pinned\w*\s*=|CapabilityResolverRevisionV1\s*=|BuildProfile\w*\s*=/m.test(source),'engine or capability implementation pin moved into Host: '+file.destination)
 }
-console.log(JSON.stringify({status:'PASS',contracts:[...files,...neutral,...owners].map(file=>file.destination),license:'GPL-3.0',authority:'retained by owner adapters'}))
+const networkWire=provenance.files.filter(file=>file.destination==='network/nftcontract/types.go')
+assert.equal(networkWire.length,1,'network wire provenance must be complete')
+for(const file of networkWire){
+ const source=fs.readFileSync(file.destination,'utf8')
+ assert.equal(createHash('sha256').update(source).digest('hex'),file.destinationSHA256,'network wire provenance drift')
+ assert.match(file.originalCommit,/^[a-f0-9]{40}$/)
+ assert.match(file.originalBlob,/^[a-f0-9]{40}$/)
+ assert.ok(file.history.length>0)
+ assert.equal(file.additionalSources.length,1,'platform support declaration provenance is required')
+ assert.match(file.additionalSources[0].originalBlob,/^[a-f0-9]{40}$/)
+ assert.ok(file.additionalSources[0].history.length>0)
+ assert.ok(!/^\s*(?:import|func|var)\s/m.test(source),'network wire must contain values only')
+ assert.deepEqual([...source.matchAll(/^type (\w+) struct\s*\{/gm)].map(match=>match[1]).sort(),
+  ['Correlation','NFTApplyRequest','NFTObserveRequest','NFTResult','NFTRollbackRequest','NFTSupport','NFTValidateRequest'].sort(),'network wire vocabulary is closed')
+ assert.ok(!/Planner|Executor|ManagedRoot|type\s+\w+\s+interface\s*\{/.test(source.replace(/^\/\/.*$/gm,'')),'execution authority in network wire')
+}
+console.log(JSON.stringify({status:'PASS',contracts:[...files,...neutral,...owners,...networkWire].map(file=>file.destination),license:'GPL-3.0',authority:'retained by owner adapters'}))
