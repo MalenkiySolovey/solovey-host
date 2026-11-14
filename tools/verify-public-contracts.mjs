@@ -107,4 +107,14 @@ for(const file of planners){
  }
  if(file.destination==='network/intent/endpoint.go') assert.deepEqual([...source.matchAll(/^func\s+(\w+)\(/gm)].map(m=>m[1]).sort(),['ValidProtectionEndpoint','validEndpoint'],'only bounded endpoint predicates may move')
 }
-console.log(JSON.stringify({status:'PASS',contracts:[...files,...neutral,...owners,...networkWire,...providers,...planners].map(file=>file.destination),license:'GPL-3.0',authority:'retained by owner adapters'}))
+const views=provenance.files.filter(file=>file.group==='operation-read-views')
+assert.deepEqual(views.map(file=>file.destination).sort(),['operationref/views.go','operationref/views_test.go'],'operation read view provenance must be complete')
+for(const file of views){
+ const source=fs.readFileSync(file.destination,'utf8')
+ assert.equal(createHash('sha256').update(source).digest('hex'),file.destinationSHA256,'operation view source drift: '+file.destination)
+ assert.match(file.originalCommit,/^[a-f0-9]{40}$/);assert.match(file.originalBlob,/^[a-f0-9]{40}$/);assert.ok(file.history.length>0)
+ for(const extra of file.additionalSources){assert.match(extra.originalBlob,/^[a-f0-9]{40}$/);assert.ok(extra.history.length>0)}
+ assert.ok(!/github.com\/MalenkiySolovey\/solovey-ui\/|gorm.io|database\/sql|os\/exec|"sync(?:\/atomic)?"|\bvar\s|\bany\b|interface\s*\{\s*\}/.test(source),'operation journal, execution or untyped owner context moved into read contracts')
+ if(file.destination==='operationref/views.go') assert.deepEqual([...source.matchAll(/^func\s+(?:\([^)]*\)\s+)?(\w+)\(/gm)].map(m=>m[1]).sort(),['ProjectJob','WithProblem'],'only existing bounded read projections may move')
+}
+console.log(JSON.stringify({status:'PASS',contracts:[...files,...neutral,...owners,...networkWire,...providers,...planners,...views].map(file=>file.destination),license:'GPL-3.0',authority:'retained by owner adapters'}))
