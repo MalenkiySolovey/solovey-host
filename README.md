@@ -19,6 +19,7 @@
 | `network/planning` | Existing coordinator input/error/ownership views and read interfaces for private immutable plan and candidate receipts; allocation, acceptance, comparison and execution remain with the coordinator. |
 | `componenthost/health` | Revision-bound evidence and typed protocol/local-proxy/interception probe values with exact identity and freshness validation; the caller retains registration, replay/generation state and probe execution. |
 | `componenthost/publicsurface` | Managed public request context and classified observations; the caller retains routing and delivery. |
+| `outbounds` | Source binding preview, revision/capability admission and verified write receipts through the existing Outbounds owner. |
 | `coreruntime` | Bounded runtime group selection through an admitted owner lease, with observation and before-image recovery. |
 | `coreruntime/inboundcontrol` | Typed inbound fallback snapshots and exact checkpoint operations; capability resolution, engine pins, database hooks and runtime execution stay with the Core owner. |
 | `scheduler` | Cancellation and drain behavior for existing scheduled jobs, using an injected operation lease. |
@@ -158,3 +159,7 @@ concurrency, cancellation, verification, ambiguous apply and failed recovery.
 ## License and provenance
 
 The library retains the original [GNU GPLv3 license](LICENSE). Source attribution, original paths and commit history are recorded in `SOURCE_PROVENANCE.json`. See [NOTICE](NOTICE) for attribution.
+
+## Source bindings
+
+`outbounds.PreviewBinding` and `ApplyBinding` use an explicit Local Host, source and endpoint identity, provider, source revision and Outbound before-image revision. The trusted Backend adapter retains its transaction and canonical Outbounds writer. Preview supplies no authority; application repeats admission under the owner fence. An accepted source snapshot never establishes an applied binding. A caller-owned uncommitted transaction returns PENDING; APPLIED requires a read-back of the exact owner write and confirmed transaction finalization. Cancellation or uncertain commit remains UNKNOWN without replay. ObserveBinding reads the explicit target and cannot fall back from an unavailable Host to Local. These receipts establish durable Outbound configuration only; Core activation and traffic health remain separate observations.
