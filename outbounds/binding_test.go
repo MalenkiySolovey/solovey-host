@@ -251,3 +251,17 @@ func TestBindingObservationNeverFallsBackToLocal(t *testing.T) {
 		t.Fatal("foreign read fell back to Local")
 	}
 }
+
+func TestBindingPreservesNativeLimiterResourceRoute(t *testing.T) {
+	for _, kind := range []string{"bandwidth-limiter", "connection-limiter", "rate-limiter", "traffic-limiter"} {
+		t.Run(kind, func(t *testing.T) {
+			c := candidate()
+			c.Definition = json.RawMessage(`{"type":"` + kind + `","tag":"source-node","route":{"final":"member","rules":[{"outbound":"member"}]}}`)
+			o := ownerFor(c)
+			r, err := ApplyBinding(context.Background(), c, o)
+			if err != nil || r.State != Applied || o.writes != 1 {
+				t.Fatalf("native limiter projection rejected: %+v %v", r, err)
+			}
+		})
+	}
+}

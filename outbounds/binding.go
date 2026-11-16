@@ -168,7 +168,12 @@ func validate(c Candidate) error {
 		if json.Unmarshal(shape["tag"], &tag) != nil || tag != c.Resource.Tag || json.Unmarshal(shape["type"], &kind) != nil || !token(kind) {
 			return ErrDefinition
 		}
-		for _, key := range []string{"inbounds", "route", "dns", "experimental"} {
+		// Native limiter Outbounds legitimately carry a scoped route object.
+		// The canonical Outbounds owner validates it; this is not a Core config.
+		if _, present := shape["route"]; present && kind != "bandwidth-limiter" && kind != "connection-limiter" && kind != "rate-limiter" && kind != "traffic-limiter" {
+			return ErrDefinition
+		}
+		for _, key := range []string{"inbounds", "dns", "experimental"} {
 			if _, ok := shape[key]; ok {
 				return ErrDefinition
 			}
