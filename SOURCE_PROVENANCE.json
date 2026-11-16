@@ -1542,6 +1542,398 @@
       "destinationSHA256": "71a6f26951fb188ad4fcb69b0c8f59cec21a7207f067e10b06ba8569f8af108a",
       "adaptation": "New independent negative coverage for raw/unbounded problem input, fictitious cancellation/deadline/progress and owner terminal outcome retention.",
       "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/canonical_test.go",
+      "destination": "subscriptions/canonical/canonical_test.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "9ce2d07060e91199077f23f8ab7477ca2c2d9eff",
+      "originalSHA256": "c8ecc587180e0ad46ac8d66eba36bb4801421777eeb58c60381c2fcaf7054afe",
+      "destinationSHA256": "c8ecc587180e0ad46ac8d66eba36bb4801421777eeb58c60381c2fcaf7054afe",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/clash_policy.go",
+      "destination": "subscriptions/canonical/clash_policy.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "e35be583d1d7e5a08c132223e49891ec3c916e2a",
+      "originalSHA256": "c7e9ca6fd17bdb2f136fe067c44a8d8cc3ebf3f6abeddd5c1ce9f49f03556597",
+      "destinationSHA256": "c7e9ca6fd17bdb2f136fe067c44a8d8cc3ebf3f6abeddd5c1ce9f49f03556597",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "832b0a717dc13449fc9fb1d06a2b5d6d1d3f7c3a\t2026-10-09T21:10:27+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tQualify WebSocket mux and reject malformed projection objects",
+        "027de38dfb09ddffb2cae46ed93056a4dd293fdb\t2026-10-09T20:44:25+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tFix canonical subscription projections and public metadata"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/critical_shapes.go",
+      "destination": "subscriptions/canonical/critical_shapes.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "d26216d09e571ea69467db5e4c25ed9b1a5c030d",
+      "originalSHA256": "9f374fee9bd7b08bb05a54acbd17628088d83aef6e816cb1956f13c48bafd65c",
+      "destinationSHA256": "9f374fee9bd7b08bb05a54acbd17628088d83aef6e816cb1956f13c48bafd65c",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "321b401d0e4dc82b49c1f878652aea8d2cb2495b\t2026-10-29T00:23:36+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tDeliver private Mieru and TrustTunnel JSON through canonical owners",
+        "30cf7da117533c8fabe606a69648e0d81b58eab5\t2026-10-28T23:53:37+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tPreserve native XHTTP through EndpointIR and share formats",
+        "0a456d4638ce6d9998ef846688d6205407d3e7c7\t2026-10-21T23:22:38+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(subscriptions): converge endpoint identity and checked owner projections"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/critical_shapes_test.go",
+      "destination": "subscriptions/canonical/critical_shapes_test.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "1010b2d64472bede207e5b3c1523f553867a5b6b",
+      "originalSHA256": "92b520ab4056ba6352d0677b566bbfaf684b2b098405a3dca081b769ed5c7570",
+      "destinationSHA256": "92b520ab4056ba6352d0677b566bbfaf684b2b098405a3dca081b769ed5c7570",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "0a456d4638ce6d9998ef846688d6205407d3e7c7\t2026-10-21T23:22:38+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(subscriptions): converge endpoint identity and checked owner projections"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/doc.go",
+      "destination": "subscriptions/canonical/doc.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "8499aaeb6f514a4a6a2f03292eba2ec273faf98c",
+      "originalSHA256": "c4e2cb1b64b6e203f9be400b523cfb533d2a35c4c37992ba68759401b05e979b",
+      "destinationSHA256": "c4e2cb1b64b6e203f9be400b523cfb533d2a35c4c37992ba68759401b05e979b",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/endpoint_ir.go",
+      "destination": "subscriptions/canonical/endpoint_ir.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "0adf455b0ec743a616f756ba661c29e3cc836fad",
+      "originalSHA256": "ea8874c470d0215ddbd046d1201ed4026262225f7b025a20e073cdedc592ae81",
+      "destinationSHA256": "9ce20b5c557b4426cff23723bf142702a96edecbb0cac783c5bac3fce145d5d6",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "4dd0dda88ae4e5255f68e1393812abc62b812047\t2026-10-29T01:00:41+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: deliver SSH clients with canonical public host trust",
+        "fcbd86ce09a584d9332e569d6ebe1b74cf69d5c2\t2026-10-29T00:49:17+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: deliver native Sudoku profiles with assigned split keys",
+        "077ccbf7356a1a8b672e02d1397b88480567c5cb\t2026-10-29T00:11:32+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdmit native XHTTP sources through canonical provider validation",
+        "0a456d4638ce6d9998ef846688d6205407d3e7c7\t2026-10-21T23:22:38+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(subscriptions): converge endpoint identity and checked owner projections"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/endpoint_ir_test.go",
+      "destination": "subscriptions/canonical/endpoint_ir_test.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "b59b50108417e1f335b589c58d004a84336fa76b",
+      "originalSHA256": "1a9e10cf2c24e4bbdd9c8b8d3bde31de52f30ce5cceeee3547355207341ad76d",
+      "destinationSHA256": "1a9e10cf2c24e4bbdd9c8b8d3bde31de52f30ce5cceeee3547355207341ad76d",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "0a456d4638ce6d9998ef846688d6205407d3e7c7\t2026-10-21T23:22:38+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(subscriptions): converge endpoint identity and checked owner projections"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/merge.go",
+      "destination": "subscriptions/canonical/merge.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "44b2d2f2f121c1ebba11bf6f66e878f327907a38",
+      "originalSHA256": "483954a2ad8755a51a86ba132c83a2b5cecec9366e73d852f4634c6e447f4464",
+      "destinationSHA256": "483954a2ad8755a51a86ba132c83a2b5cecec9366e73d852f4634c6e447f4464",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "0a456d4638ce6d9998ef846688d6205407d3e7c7\t2026-10-21T23:22:38+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(subscriptions): converge endpoint identity and checked owner projections",
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/model.go",
+      "destination": "subscriptions/canonical/model.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "2ed707e475b0ffb6b3eaafc901c6c928af430807",
+      "originalSHA256": "3f26448a1019572e23274ee5989e1bda6e6c4b46ba9f6199af2a88f5cc39d23d",
+      "destinationSHA256": "3f26448a1019572e23274ee5989e1bda6e6c4b46ba9f6199af2a88f5cc39d23d",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "0a456d4638ce6d9998ef846688d6205407d3e7c7\t2026-10-21T23:22:38+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(subscriptions): converge endpoint identity and checked owner projections",
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/names.go",
+      "destination": "subscriptions/canonical/names.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "466900bf16b672fb297d843ed7256ecc33850c3a",
+      "originalSHA256": "d981c8665f967e7fe0b2c334982c0b24bf2c3d1c09c3a11406cda520058f1835",
+      "destinationSHA256": "d981c8665f967e7fe0b2c334982c0b24bf2c3d1c09c3a11406cda520058f1835",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/observe.go",
+      "destination": "subscriptions/canonical/observe.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "2c880eac43f8b6c576fafd1b26bf49677befcb9f",
+      "originalSHA256": "a5edb6791e0c999a451f3778aef81651cc3fc450a14974ed45bd26e7c28ed0c0",
+      "destinationSHA256": "a319c65d543a7957bab6330c8b7d8963a622088120fe11512adf3db27ab0d380",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "de6b9eca87875006899dc390255de59c6debb1b0\t2026-11-05T00:02:35+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tExpose native limiter policies through canonical Outbounds and shared editors",
+        "d5bf080626fd0d8de16fd8d9129096f5145608be\t2026-11-04T19:59:46+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfix(subscriptions): preserve canonical native group delivery",
+        "0a456d4638ce6d9998ef846688d6205407d3e7c7\t2026-10-21T23:22:38+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(subscriptions): converge endpoint identity and checked owner projections",
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/outbounds.go",
+      "destination": "subscriptions/canonical/outbounds.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "af23d0c4b76b9653e1c7c8a86ec4a4ee26defec8",
+      "originalSHA256": "a64b5ba74fb6f8759bbace9fb64e980ef43c59bd2160a140a880fc9e46f19b0e",
+      "destinationSHA256": "a64b5ba74fb6f8759bbace9fb64e980ef43c59bd2160a140a880fc9e46f19b0e",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "0a456d4638ce6d9998ef846688d6205407d3e7c7\t2026-10-21T23:22:38+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(subscriptions): converge endpoint identity and checked owner projections",
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/plugin.go",
+      "destination": "subscriptions/canonical/plugin.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "42a4a45a5a479061b43bca03db54764fd067abda",
+      "originalSHA256": "02a2f2fe0f6a0355d869fc11e9c25efc9aad1fcced16a76925992be83c1d028f",
+      "destinationSHA256": "02a2f2fe0f6a0355d869fc11e9c25efc9aad1fcced16a76925992be83c1d028f",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "832b0a717dc13449fc9fb1d06a2b5d6d1d3f7c3a\t2026-10-09T21:10:27+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tQualify WebSocket mux and reject malformed projection objects",
+        "027de38dfb09ddffb2cae46ed93056a4dd293fdb\t2026-10-09T20:44:25+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tFix canonical subscription projections and public metadata"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/ports.go",
+      "destination": "subscriptions/canonical/ports.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "075b76d3cf77c70f0e4ae2a371f6512cfb627e5a",
+      "originalSHA256": "14cdb69378267aabd2290cab4b36a19c4802d567cd6fab1b43d45c0727f960bc",
+      "destinationSHA256": "14cdb69378267aabd2290cab4b36a19c4802d567cd6fab1b43d45c0727f960bc",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "832b0a717dc13449fc9fb1d06a2b5d6d1d3f7c3a\t2026-10-09T21:10:27+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tQualify WebSocket mux and reject malformed projection objects",
+        "027de38dfb09ddffb2cae46ed93056a4dd293fdb\t2026-10-09T20:44:25+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tFix canonical subscription projections and public metadata"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/projection.go",
+      "destination": "subscriptions/canonical/projection.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "148c427c7e913c3a3171114da9a5b26219232a71",
+      "originalSHA256": "b66db1c7cdb6faf1b0ce39244928612e92e6428d5a9e60254597bd805a978866",
+      "destinationSHA256": "5768939b20770f0d9677aeb91c7a44d1d96f55b59207fda37af53bdd876042f9",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "da78b8b92543a476ea722f12c94cba4e1d7d4a49\t2026-11-04T19:31:04+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(failover): preserve explicit all-down policy through shared owners",
+        "fcbd86ce09a584d9332e569d6ebe1b74cf69d5c2\t2026-10-29T00:49:17+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: deliver native Sudoku profiles with assigned split keys",
+        "d2ad49d20a38edf73ceb2f430d07bdbe5c81303e\t2026-10-29T00:40:07+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: deliver private native Mieru and Telegram share links",
+        "077ccbf7356a1a8b672e02d1397b88480567c5cb\t2026-10-29T00:11:32+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdmit native XHTTP sources through canonical provider validation",
+        "30cf7da117533c8fabe606a69648e0d81b58eab5\t2026-10-28T23:53:37+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tPreserve native XHTTP through EndpointIR and share formats",
+        "0a456d4638ce6d9998ef846688d6205407d3e7c7\t2026-10-21T23:22:38+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(subscriptions): converge endpoint identity and checked owner projections"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/projection_policy_test.go",
+      "destination": "subscriptions/canonical/projection_policy_test.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "4da41df4122ad98809eab3e846d83691fa2d2296",
+      "originalSHA256": "92bbeaa21f888d96d1a7def8a88144dc8e8cf284df97667cc34b8202b101acab",
+      "destinationSHA256": "92bbeaa21f888d96d1a7def8a88144dc8e8cf284df97667cc34b8202b101acab",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "da78b8b92543a476ea722f12c94cba4e1d7d4a49\t2026-11-04T19:31:04+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat(failover): preserve explicit all-down policy through shared owners",
+        "0a456d4638ce6d9998ef846688d6205407d3e7c7\t2026-10-21T23:22:38+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(subscriptions): converge endpoint identity and checked owner projections"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/public_names.go",
+      "destination": "subscriptions/canonical/public_names.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "8bbc616955e3ecef3da288a622624dc60fa95519",
+      "originalSHA256": "abb81bb541ae70a8396b4671fd9bb6735c81532c10adf8f1bcec4e149d790318",
+      "destinationSHA256": "abb81bb541ae70a8396b4671fd9bb6735c81532c10adf8f1bcec4e149d790318",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "832b0a717dc13449fc9fb1d06a2b5d6d1d3f7c3a\t2026-10-09T21:10:27+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tQualify WebSocket mux and reject malformed projection objects",
+        "027de38dfb09ddffb2cae46ed93056a4dd293fdb\t2026-10-09T20:44:25+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tFix canonical subscription projections and public metadata"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/canonical/source.go",
+      "destination": "subscriptions/canonical/source.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "81d2a0d518b74f43339baee2cf3124680b419bfa",
+      "originalSHA256": "3f26bd973149cccffde4d5551bf978f3cc453465a94f9f58d8e7d63d86cdfd4e",
+      "destinationSHA256": "3f26bd973149cccffde4d5551bf978f3cc453465a94f9f58d8e7d63d86cdfd4e",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "0a456d4638ce6d9998ef846688d6205407d3e7c7\t2026-10-21T23:22:38+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\trefactor(subscriptions): converge endpoint identity and checked owner projections"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/conversion/client_options.go",
+      "destination": "subscriptions/conversion/client_options.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "4738e1f78a0d0fb93cb931806b27e5540245ded2",
+      "originalSHA256": "f6baaff11ec8f85489f188e3be94e41a0076cdf0268c66c4f053c981b74593fe",
+      "destinationSHA256": "f6baaff11ec8f85489f188e3be94e41a0076cdf0268c66c4f053c981b74593fe",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "27f6b0b78b4c38b06bdf8a4a5140051256b14863\t2026-07-02T16:59:26+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tPrepare Solovey UI 2026.2.0 release"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/conversion/policy.go",
+      "destination": "subscriptions/conversion/policy.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "621e7743ef7b77027523c1572ad1eb32dcd00f1e",
+      "originalSHA256": "5489c77966d281714ec3c3ef16a34834867949c6953ce629e7ecc0977672a0db",
+      "destinationSHA256": "5489c77966d281714ec3c3ef16a34834867949c6953ce629e7ecc0977672a0db",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/subscriptions/conversion/policy_test.go",
+      "destination": "subscriptions/conversion/policy_test.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "1c697e2fd849a72f616a024c9c4650d95e261957",
+      "originalSHA256": "998a8b36e0d4e73f4296062a0fb80feb80143ff472de29b47c23a58a5df7c27c",
+      "destinationSHA256": "998a8b36e0d4e73f4296062a0fb80feb80143ff472de29b47c23a58a5df7c27c",
+      "adaptation": "Public shared import paths only; existing production algorithm and tests retained.",
+      "history": [
+        "328992697756e0520fa4a048a660e69df4374a89\t2026-06-26T03:17:29+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tRelease Solovey UI 2026.1.0"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/entities/inbounds/clientfacts/facts.go",
+      "destination": "subscriptions/clientfacts/facts.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "76c0e77391ecd94b6b7ec0bff624a1eccb3f1ebb",
+      "originalSHA256": "dd50b9d69e12466c37d81ba1de15bf1801f4cf14547714bdd343e082fbbda7e1",
+      "destinationSHA256": "20852da8bb9ae919b72c7f2eee5d96fbe9c72e00999346b3b9cf7474fe2f935c",
+      "adaptation": "Portable declaration, lookup, UDP and credential schema functions only; runtime admission remains with Product.",
+      "history": [
+        "4dd0dda88ae4e5255f68e1393812abc62b812047\t2026-10-29T01:00:41+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: deliver SSH clients with canonical public host trust",
+        "fcbd86ce09a584d9332e569d6ebe1b74cf69d5c2\t2026-10-29T00:49:17+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: deliver native Sudoku profiles with assigned split keys",
+        "d2ad49d20a38edf73ceb2f430d07bdbe5c81303e\t2026-10-29T00:40:07+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfeat: deliver private native Mieru and Telegram share links",
+        "321b401d0e4dc82b49c1f878652aea8d2cb2495b\t2026-10-29T00:23:36+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tDeliver private Mieru and TrustTunnel JSON through canonical owners",
+        "d1c9edefe236dba34ac64b4f8558902a3e51d874\t2026-10-26T23:14:55+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tServe Sudoku with owned master and delivery credentials",
+        "44ad9182c2042019138e7719b906b9a41b966414\t2026-10-25T15:53:13+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdd native inbound workflows with Users-owned credentials",
+        "e2fb901b3f4e544e6c7f16a4609f28d5a2d816ed\t2026-10-12T18:25:09+03:00\troot <root@MalenkiySolovey.localdomain>\tfix: align Shadowsocks credentials across runtime and client delivery",
+        "027de38dfb09ddffb2cae46ed93056a4dd293fdb\t2026-10-09T20:44:25+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tFix canonical subscription projections and public metadata",
+        "b22330e35ae02ea5c312349ed1fb42199cc4faf8\t2026-10-09T17:13:11+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tEnable managed Snell with official version and admission contracts",
+        "d927e1592b705db0e1a3eafd8a488f45831272e5\t2026-10-05T17:23:56+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfix(parity): align import and local delivery with capability facts"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/entities/protocol/transport_defaults.go",
+      "destination": "subscriptions/protocoldefaults/transport.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "b4d585d45c2367cdc58510964bfd4007f91df642",
+      "originalSHA256": "cdf98ec01b5368883bac7ba50eee892202c1e6e838f3851f62247490ae792ead",
+      "destinationSHA256": "135c8c59bf03652a89c26a305fb2fb1922cbd202d8a5cdff12467adc92d4c1c1",
+      "adaptation": "Existing XHTTP default constant and attribution; editor and source parser share the same value.",
+      "history": [
+        "077ccbf7356a1a8b672e02d1397b88480567c5cb\t2026-10-29T00:11:32+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAdmit native XHTTP sources through canonical provider validation"
+      ],
+      "additionalSources": []
+    },
+    {
+      "source": "internal/entities/outbounds/composition/groups.go",
+      "destination": "outbounds/references.go",
+      "group": "subscription-projections",
+      "originalRepository": "https://github.com/MalenkiySolovey/solovey-ui",
+      "originalCommit": "ab55c89d4309c6b0f76107d57e19d37cd287b114",
+      "originalBlob": "a994454317dde45e3a5d52c6c3ca35eeccb49338",
+      "originalSHA256": "10e2a5b2aac2d34d0114f5272c491a624521925bc2b748d323f34d7d281ba7e7",
+      "destinationSHA256": "3f6896e679300c8ba032692a57b68501bf084668ffd243d8a05f366ed3342fac",
+      "adaptation": "Existing IsLimiter and LimiterReferences functions only; canonical writing and group composition remain with Product.",
+      "history": [
+        "de6b9eca87875006899dc390255de59c6debb1b0\t2026-11-05T00:02:35+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tExpose native limiter policies through canonical Outbounds and shared editors",
+        "d5bf080626fd0d8de16fd8d9129096f5145608be\t2026-11-04T19:59:46+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tfix(subscriptions): preserve canonical native group delivery",
+        "30e36abf6c9aff02b79f660c5bed33890a5d5015\t2026-10-28T02:26:09+03:00\tMalenkiySolovey <147066644+MalenkiySolovey@users.noreply.github.com>\tAssemble native Bond and CoreFailover through canonical outbound members"
+      ],
+      "additionalSources": []
     }
   ],
   "fixtures": {
