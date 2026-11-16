@@ -117,4 +117,12 @@ for(const file of views){
  assert.ok(!/github.com\/MalenkiySolovey\/solovey-ui\/|gorm.io|database\/sql|os\/exec|"sync(?:\/atomic)?"|\bvar\s|\bany\b|interface\s*\{\s*\}/.test(source),'operation journal, execution or untyped owner context moved into read contracts')
  if(file.destination==='operationref/views.go') assert.deepEqual([...source.matchAll(/^func\s+(?:\([^)]*\)\s+)?(\w+)\(/gm)].map(m=>m[1]).sort(),['ProjectJob','WithProblem'],'only existing bounded read projections may move')
 }
-console.log(JSON.stringify({status:'PASS',contracts:[...files,...neutral,...owners,...networkWire,...providers,...planners,...views].map(file=>file.destination),license:'GPL-3.0',authority:'retained by owner adapters'}))
+const projections=provenance.files.filter(file=>file.group==='subscription-projections')
+assert.equal(projections.length,24,'shared subscription source provenance must be complete')
+for(const file of projections){
+ const source=fs.readFileSync(file.destination,'utf8')
+ assert.equal(createHash('sha256').update(source).digest('hex'),file.destinationSHA256,'shared subscription source drift: '+file.destination)
+ assert.match(file.originalCommit,/^[a-f0-9]{40}$/);assert.match(file.originalBlob,/^[a-f0-9]{40}$/);assert.ok(file.history.length>0)
+ assert.ok(!/github.com\/MalenkiySolovey\/solovey-ui\/|gorm.io|database\/sql|os\/exec|net\.(?:Listen|Dial)|time\.NewTicker/.test(source),'private storage or execution in shared subscription source: '+file.destination)
+}
+console.log(JSON.stringify({status:'PASS',contracts:[...files,...neutral,...owners,...networkWire,...providers,...planners,...views,...projections].map(file=>file.destination),license:'GPL-3.0',authority:'retained by owner adapters'}))

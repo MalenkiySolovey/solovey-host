@@ -20,6 +20,9 @@
 | `componenthost/health` | Revision-bound evidence and typed protocol/local-proxy/interception probe values with exact identity and freshness validation; the caller retains registration, replay/generation state and probe execution. |
 | `componenthost/publicsurface` | Managed public request context and classified observations; the caller retains routing and delivery. |
 | `outbounds` | Source binding preview, revision/capability admission and verified write receipts through the existing Outbounds owner. |
+| `subscriptions/canonical` and `subscriptions/conversion` | Existing format-neutral snapshots, source observations, identity-preserving merge and checked client projections shared by source import and Publishing. |
+| `subscriptions/clientfacts` and `subscriptions/protocoldefaults` | Portable protocol credential/delivery schema and existing transport defaults; runtime admission remains with the caller. |
+| `subscriptions/parseport` | Finite format parser port implemented by the existing Backend parser; no parser, fetcher or publisher is registered by importing this module. |
 | `coreruntime` | Bounded runtime group selection through an admitted owner lease, with observation and before-image recovery. |
 | `coreruntime/inboundcontrol` | Typed inbound fallback snapshots and exact checkpoint operations; capability resolution, engine pins, database hooks and runtime execution stay with the Core owner. |
 | `scheduler` | Cancellation and drain behavior for existing scheduled jobs, using an injected operation lease. |
@@ -163,3 +166,9 @@ The library retains the original [GNU GPLv3 license](LICENSE). Source attributio
 ## Source bindings
 
 `outbounds.PreviewBinding` and `ApplyBinding` use an explicit Local Host, source and endpoint identity, provider, source revision and Outbound before-image revision. The trusted Backend adapter retains its transaction and canonical Outbounds writer. Preview supplies no authority; application repeats admission under the owner fence. An accepted source snapshot never establishes an applied binding. A caller-owned uncommitted transaction returns PENDING; APPLIED requires a read-back of the exact owner write and confirmed transaction finalization. Cancellation or uncertain commit remains UNKNOWN without replay. ObserveBinding reads the explicit target and cannot fall back from an unavailable Host to Local. These receipts establish durable Outbound configuration only; Core activation and traffic health remain separate observations.
+
+## Shared subscription projections
+
+The subscription packages preserve the existing native, Xray, Mihomo/Clash and URI observation model. Source import and Users Publishing consume these same types and algorithms. Unmapped critical semantics remain inspectable and cannot silently become permissive runtime defaults. Snapshot acceptance grants no Outbound write or publication authority.
+
+The parser port takes one bounded format representation, its existing conversion policy and an operation context. Backend supplies its existing parser implementation. The external source owner retains representation selection and legacy multi-representation merge policy. This module does not fetch sources, load files, own durable data, start workers or render public user subscriptions.
