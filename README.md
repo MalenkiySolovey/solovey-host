@@ -111,7 +111,7 @@ Health/readiness. Failed Stop retains the instance even after disable/removal
 intent. Ordinary disable calls neither DropData nor external-rule cleanup.
 Owner-specific data removal and privileged enforcement remain separate.
 
-Component composition retains installed/enabled admission, authorization and storage. The lifecycle contracts expose only capabilities already used by their consumers. The scheduled-job helper does not construct a second scheduler; its caller supplies the existing operation admission and retains registration/stop ownership. SecretRef provides masked metadata and owner-use validation without storing or revealing secrets.
+ComponentHost owns catalog projection and local lifecycle and metadata-removal rules. Composition supplies installed/enabled state, existing admission, the metadata writer, and the supervisor. Panel request authorization and storage stay outside Host. The scheduled-job helper does not construct a second scheduler; its caller supplies the existing operation admission and retains registration/stop ownership. SecretRef provides masked metadata and owner-use validation without storing or revealing secrets.
 
 Bot API callers supply their approved HTTP client and operation context. The helper creates no background client, bot registration or polling loop. Proxy selection and validation remain with caller adapters. The only external Go dependency is the existing `github.com/robfig/cron/v3` v3.0.1 contract.
 
