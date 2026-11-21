@@ -24,7 +24,7 @@ type ZapretBinding struct {
 func ValidZapretStrategyRef(ref string) bool { return zapretStrategyID.MatchString(ref) }
 
 func (binding ZapretBinding) Validate(outboundRef, kind, detour string) error {
-	if !zapretOutboundID.MatchString(outboundRef) || binding.OutboundRef != outboundRef || kind != "direct" || binding.Enabled && detour != "" {
+	if !zapretOutboundID.MatchString(outboundRef) || binding.OutboundRef != outboundRef || kind != "direct" || detour != "" {
 		return ErrZapretDirectRequired
 	}
 	if (binding.Enabled || binding.StrategyRef != "") && !ValidZapretStrategyRef(binding.StrategyRef) {
