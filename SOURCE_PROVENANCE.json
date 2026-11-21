@@ -1410,7 +1410,7 @@
       ],
       "group": "planner-contracts",
       "destination": "network/planning/types.go",
-      "destinationSHA256": "190237ef3bae994135e77fc4c05ec67207699fcefe928a5ddd60c4b9f1563eae",
+      "destinationSHA256": "696b61bcd59f8b83b8216e6506bea6ac1018c2c840a44b20b15142424950f0f9",
       "adaptation": "Existing value/error vocabulary and serialized inputs only. Platform availability is projected as its exact string representation; the Backend adapter retains the typed private platform observation. Allocation, comparison and accepted-plan algorithms remain in Product.",
       "additionalSources": [
         {
