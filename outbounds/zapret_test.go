@@ -11,7 +11,7 @@ func TestZapretBindingOnlyAdmitsAnExplicitDirect(t *testing.T) {
 		outbound, typ, via string
 		want               error
 	}{
-		{ZapretBinding{"a", false, "saved"}, "a", "direct", "proxy", nil},
+		{ZapretBinding{"a", false, "saved"}, "a", "direct", "proxy", ErrZapretDirectRequired},
 		{ZapretBinding{"a", true, "saved"}, "a", "direct", "", nil},
 		{ZapretBinding{"a", true, ""}, "a", "direct", "", ErrZapretStrategyRef},
 		{ZapretBinding{"a", true, "saved"}, "b", "direct", "", ErrZapretDirectRequired},
