@@ -2,7 +2,7 @@ package intent
 
 import (
 	"fmt"
-	"sort"
+	"slices"
 	"strings"
 
 	"github.com/MalenkiySolovey/solovey-host/hostref"
@@ -12,6 +12,7 @@ const (
 	ZapretPacketPathSchema = "solovey-ui/zapret-packet-path/v1"
 	ZapretOwner            = "zapret"
 	ZapretResourcePrefix   = "outbound:"
+	ZapretPurpose          = "direct-outbound-zapret"
 )
 
 // PacketProtocol is the transport family that the selected Strategy can
@@ -47,49 +48,60 @@ type ZapretPacketPathIntent struct {
 	DesiredRevision  string            `json:"desiredRevision"`
 	InputRevision    string            `json:"inputRevision"`
 	Protocols        []PacketProtocol  `json:"protocols"`
+	TCPPorts         []uint16          `json:"tcpPorts,omitempty"`
+	UDPPorts         []uint16          `json:"udpPorts,omitempty"`
 	Directions       []PacketDirection `json:"directions"`
 	NeedsReturn      bool              `json:"needsReturn"`
 	Purpose          string            `json:"purpose"`
 }
 
-// CanonicalZapretPacketPathIntent returns a copy with bounded ordered lists.
+// CanonicalZapretPacketPathIntent returns a copy with ordered lists.
 // It never invents an identity or changes the selected Outbound/Strategy.
 func CanonicalZapretPacketPathIntent(value ZapretPacketPathIntent) ZapretPacketPathIntent {
-	value.Protocols = append([]PacketProtocol(nil), value.Protocols...)
-	value.Directions = append([]PacketDirection(nil), value.Directions...)
-	sort.Slice(value.Protocols, func(i, j int) bool { return value.Protocols[i] < value.Protocols[j] })
-	sort.Slice(value.Directions, func(i, j int) bool { return value.Directions[i] < value.Directions[j] })
-	value.Protocols = uniqueProtocols(value.Protocols)
-	value.Directions = uniqueDirections(value.Directions)
+	value.Protocols = slices.Clone(value.Protocols)
+	value.TCPPorts = slices.Clone(value.TCPPorts)
+	value.UDPPorts = slices.Clone(value.UDPPorts)
+	value.Directions = slices.Clone(value.Directions)
+	slices.Sort(value.Protocols)
+	slices.Sort(value.TCPPorts)
+	slices.Sort(value.UDPPorts)
+	slices.Sort(value.Directions)
 	return value
 }
 
 func (value ZapretPacketPathIntent) Validate() error {
-	value = CanonicalZapretPacketPathIntent(value)
 	if value.Schema != ZapretPacketPathSchema || !value.HostRef.IsLocal() || value.Owner != ZapretOwner ||
-		!token(value.ResourceRef, 256) || !strings.HasPrefix(value.ResourceRef, ZapretResourcePrefix) ||
-		!token(strings.TrimPrefix(value.ResourceRef, ZapretResourcePrefix), 192) ||
 		!token(value.OutboundRef, 192) || !token(value.StrategyRef, 192) ||
 		!digest(value.StrategyRevision) || !digest(value.DesiredRevision) || !digest(value.InputRevision) ||
-		!token(value.Purpose, 96) || len(value.Protocols) == 0 || len(value.Protocols) > 2 ||
+		value.Purpose != ZapretPurpose || len(value.Protocols) == 0 || len(value.Protocols) > 2 ||
 		len(value.Directions) == 0 || len(value.Directions) > 2 {
 		return fmt.Errorf("zapret packet-path intent is malformed")
 	}
 	if value.ResourceRef != ZapretResourcePrefix+value.OutboundRef {
 		return fmt.Errorf("zapret packet-path resource does not identify its outbound")
 	}
-	for _, protocol := range value.Protocols {
-		if protocol != PacketProtocolTCP && protocol != PacketProtocolUDP {
-			return fmt.Errorf("zapret packet-path protocol %q is unsupported", protocol)
+	for index, protocol := range value.Protocols {
+		if protocol != PacketProtocolTCP && protocol != PacketProtocolUDP || index > 0 && protocol == value.Protocols[index-1] {
+			return fmt.Errorf("zapret packet-path protocols are invalid")
 		}
+	}
+	if !validZapretPorts(value.TCPPorts, slices.Contains(value.Protocols, PacketProtocolTCP)) ||
+		!validZapretPorts(value.UDPPorts, slices.Contains(value.Protocols, PacketProtocolUDP)) {
+		return fmt.Errorf("zapret packet-path requires explicit, bounded ports for each protocol")
 	}
 	hasOutbound := false
 	hasInbound := false
 	for _, direction := range value.Directions {
 		switch direction {
 		case PacketDirectionOutbound:
+			if hasOutbound {
+				return fmt.Errorf("zapret packet-path direction is duplicated")
+			}
 			hasOutbound = true
 		case PacketDirectionInbound:
+			if hasInbound {
+				return fmt.Errorf("zapret packet-path direction is duplicated")
+			}
 			hasInbound = true
 		default:
 			return fmt.Errorf("zapret packet-path direction %q is unsupported", direction)
@@ -101,24 +113,18 @@ func (value ZapretPacketPathIntent) Validate() error {
 	return nil
 }
 
-func uniqueProtocols(values []PacketProtocol) []PacketProtocol {
-	result := make([]PacketProtocol, 0, len(values))
-	for _, value := range values {
-		if len(result) == 0 || result[len(result)-1] != value {
-			result = append(result, value)
-		}
+func validZapretPorts(ports []uint16, required bool) bool {
+	if (len(ports) > 0) != required || len(ports) > 64 {
+		return false
 	}
-	return result
-}
-
-func uniqueDirections(values []PacketDirection) []PacketDirection {
-	result := make([]PacketDirection, 0, len(values))
-	for _, value := range values {
-		if len(result) == 0 || result[len(result)-1] != value {
-			result = append(result, value)
+	seen := make(map[uint16]bool, len(ports))
+	for _, port := range ports {
+		if port == 0 || seen[port] {
+			return false
 		}
+		seen[port] = true
 	}
-	return result
+	return true
 }
 
 func token(value string, limit int) bool {

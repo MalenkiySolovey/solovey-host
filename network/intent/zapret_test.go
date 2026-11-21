@@ -18,7 +18,9 @@ func zapretIntentFixture() ZapretPacketPathIntent {
 		StrategyRevision: strings.Repeat("a", 64),
 		DesiredRevision:  strings.Repeat("b", 64),
 		InputRevision:    strings.Repeat("c", 64),
-		Protocols:        []PacketProtocol{PacketProtocolUDP, PacketProtocolTCP, PacketProtocolTCP},
+		Protocols:        []PacketProtocol{PacketProtocolUDP, PacketProtocolTCP},
+		TCPPorts:         []uint16{443, 80},
+		UDPPorts:         []uint16{443},
 		Directions:       []PacketDirection{PacketDirectionInbound, PacketDirectionOutbound},
 		NeedsReturn:      true,
 		Purpose:          "direct-outbound-zapret",
@@ -52,6 +54,8 @@ func TestZapretPacketPathIntentRejectsMissingReturnAndForeignIdentity(t *testing
 		{"resource mismatch", func(value *ZapretPacketPathIntent) { value.ResourceRef = "outbound:direct-b" }},
 		{"return direction without requirement", func(value *ZapretPacketPathIntent) { value.NeedsReturn = false }},
 		{"missing strategy revision", func(value *ZapretPacketPathIntent) { value.StrategyRevision = "" }},
+		{"duplicate protocol", func(value *ZapretPacketPathIntent) { value.Protocols[0] = value.Protocols[1] }},
+		{"unbounded TCP scope", func(value *ZapretPacketPathIntent) { value.TCPPorts = nil }},
 	}
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
