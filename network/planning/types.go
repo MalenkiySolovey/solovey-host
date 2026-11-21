@@ -44,6 +44,7 @@ func (c *Conflict) Error() string { return fmt.Sprintf("network plan %s: %s", c.
 type ResourceBinding = networkintent.ResourceBinding
 type Intent = networkintent.Intent
 type ProtectionEnforcementIntent = networkintent.ProtectionEnforcementIntent
+type ZapretPacketPathIntent = networkintent.ZapretPacketPathIntent
 
 const (
 	CapabilityAvailable        = "AVAILABLE"
