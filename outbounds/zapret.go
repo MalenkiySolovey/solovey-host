@@ -36,7 +36,7 @@ func (binding ZapretBinding) Validate(outboundRef, kind, detour string) error {
 	// These kinds can delegate to a shared dialer. The selected provider and
 	// installed broker still have to qualify the concrete socket path.
 	switch kind {
-	case "direct", "http", "hysteria2", "tuic", "vless", "vmess", "trojan", "anytls", "shadowtls", "ssh", "socks", "shadowsocks":
+	case "direct", "http", "hysteria2", "tuic", "vless", "vmess", "trojan", "anytls", "shadowtls", "ssh", "socks", "shadowsocks", "snell":
 	default:
 		return fmt.Errorf("%w: no shared dial path admitted for outbound type %q", ErrZapretSocketRequired, kind)
 	}
