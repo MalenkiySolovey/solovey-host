@@ -50,6 +50,8 @@ type ZapretPacketPathIntent struct {
 	Protocols        []PacketProtocol  `json:"protocols"`
 	TCPPorts         []uint16          `json:"tcpPorts,omitempty"`
 	UDPPorts         []uint16          `json:"udpPorts,omitempty"`
+	TCPPortRanges    []PortInterval    `json:"tcpPortRanges,omitempty"`
+	UDPPortRanges    []PortInterval    `json:"udpPortRanges,omitempty"`
 	Directions       []PacketDirection `json:"directions"`
 	NeedsReturn      bool              `json:"needsReturn"`
 	Purpose          string            `json:"purpose"`
@@ -61,6 +63,8 @@ func CanonicalZapretPacketPathIntent(value ZapretPacketPathIntent) ZapretPacketP
 	value.Protocols = slices.Clone(value.Protocols)
 	value.TCPPorts = slices.Clone(value.TCPPorts)
 	value.UDPPorts = slices.Clone(value.UDPPorts)
+	value.TCPPortRanges = slices.Clone(value.TCPPortRanges)
+	value.UDPPortRanges = slices.Clone(value.UDPPortRanges)
 	value.Directions = slices.Clone(value.Directions)
 	slices.Sort(value.Protocols)
 	slices.Sort(value.TCPPorts)
@@ -85,9 +89,9 @@ func (value ZapretPacketPathIntent) Validate() error {
 			return fmt.Errorf("zapret packet-path protocols are invalid")
 		}
 	}
-	if !validZapretPorts(value.TCPPorts, slices.Contains(value.Protocols, PacketProtocolTCP)) ||
-		!validZapretPorts(value.UDPPorts, slices.Contains(value.Protocols, PacketProtocolUDP)) {
-		return fmt.Errorf("zapret packet-path requires explicit, bounded ports for each protocol")
+	if !validZapretPortScope(value.TCPPorts, value.TCPPortRanges, slices.Contains(value.Protocols, PacketProtocolTCP)) ||
+		!validZapretPortScope(value.UDPPorts, value.UDPPortRanges, slices.Contains(value.Protocols, PacketProtocolUDP)) {
+		return fmt.Errorf("zapret packet-path requires one port representation per protocol: a legacy list or canonical positive ranges")
 	}
 	hasOutbound := false
 	hasInbound := false
@@ -113,7 +117,20 @@ func (value ZapretPacketPathIntent) Validate() error {
 	return nil
 }
 
-func validZapretPorts(ports []uint16, required bool) bool {
+func validZapretPortScope(ports []uint16, ranges []PortInterval, required bool) bool {
+	if len(ranges) != 0 {
+		if !required || len(ports) != 0 {
+			return false
+		}
+		for i, span := range ranges {
+			if span.First == 0 || span.Last < span.First || i > 0 && uint32(span.First) <= uint32(ranges[i-1].Last)+1 {
+				return false
+			}
+		}
+		return true
+	}
+	// Preserve the legacy explicit-list contract. New producers can carry any
+	// positive coverage using ranges, independently of the number of ports.
 	if (len(ports) > 0) != required || len(ports) > 64 {
 		return false
 	}
