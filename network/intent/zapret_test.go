@@ -1,11 +1,62 @@
 package intent
 
 import (
+	"encoding/json"
+	"slices"
 	"strings"
 	"testing"
 
 	"github.com/MalenkiySolovey/solovey-host/hostref"
 )
+
+func TestZapretPacketPathIntentCarriesCompactPortRanges(t *testing.T) {
+	value := zapretIntentFixture()
+	value.TCPPorts = nil
+	value.TCPPortRanges = []PortInterval{{80, 80}, {1000, 65000}}
+	canonical := CanonicalZapretPacketPathIntent(value)
+	if err := canonical.Validate(); err != nil {
+		t.Fatal(err)
+	}
+	value.TCPPortRanges[1].Last = 1001
+	if canonical.TCPPortRanges[1].Last != 65000 {
+		t.Fatal("canonical intent retained caller-owned ranges")
+	}
+	data, err := json.Marshal(canonical)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var decoded ZapretPacketPathIntent
+	if err := json.Unmarshal(data, &decoded); err != nil || decoded.Validate() != nil ||
+		len(decoded.TCPPorts) != 0 || !slices.Equal(decoded.TCPPortRanges, canonical.TCPPortRanges) {
+		t.Fatalf("compact scope lost during transfer: %+v, %v", decoded, err)
+	}
+	for _, edit := range []func(*ZapretPacketPathIntent){
+		func(value *ZapretPacketPathIntent) { value.TCPPorts = []uint16{443} },
+		func(value *ZapretPacketPathIntent) { value.TCPPortRanges = []PortInterval{{80, 0}} },
+		func(value *ZapretPacketPathIntent) { value.TCPPortRanges = []PortInterval{{0, 500}} },
+		func(value *ZapretPacketPathIntent) { value.TCPPortRanges = []PortInterval{{80, 500}, {499, 700}} },
+		func(value *ZapretPacketPathIntent) { value.TCPPortRanges = []PortInterval{{80, 500}, {501, 700}} },
+		func(value *ZapretPacketPathIntent) { value.TCPPortRanges = []PortInterval{{90, 90}, {80, 80}} },
+	} {
+		candidate := canonical
+		edit(&candidate)
+		if candidate.Validate() == nil {
+			t.Fatalf("invalid range scope accepted: %+v", candidate)
+		}
+	}
+}
+
+func TestCanonicalPortIntervalsPreservesUnionAndEndOfDomain(t *testing.T) {
+	input := []PortInterval{{64000, 65535}, {1000, 1099}, {1018, 1042}, {200, 203}}
+	got, err := CanonicalPortIntervals([]uint16{65535, 80, 1100, 199}, input...)
+	want := []PortInterval{{80, 80}, {199, 203}, {1000, 1100}, {64000, 65535}}
+	if err != nil || !slices.Equal(got, want) {
+		t.Fatalf("interval union = %+v, %v; want %+v", got, err, want)
+	}
+	if input[0] != (PortInterval{64000, 65535}) {
+		t.Fatal("interval canonicalization changed the caller's input")
+	}
+}
 
 func zapretIntentFixture() ZapretPacketPathIntent {
 	return ZapretPacketPathIntent{
